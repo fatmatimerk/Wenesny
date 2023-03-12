@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wnesny</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="down-removebg-preview.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Lobster&family=Macondo&family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
+    <meta name="description" content="A page containing books, volumes, and summaries in all fields and all sciences"/>
+    <meta name="keywords" content="books,files,summaries,reading">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <style>
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: antiquewhite;
+}
+h1{
+    color:brown ;
+}
+h2{
+    color: #d36709;
+}
+
+.container{
+    font-family: 'Lobster', cursive;
+    font-size:22px ;
+    width:auto;
+    display: grid;
+    grid-auto-rows: minmax(1fr,auto);
+    grid-template-areas: 
+    "n"
+    "l"
+    "ab"
+    "li"
+    "ro"
+    "co"
+    "f"
+    ;
+    grid-gap:5px;
+}
+
+/*------- nav style --------*/
+#na{
+    grid-area: n;
+    width: 98%;
+    margin: auto;
+    background-color:#F5CBA7;
+}
+#naf{
+    padding-right: 5%;
+}
+
+/*------- logo style --------*/
+#di1{
+    grid-area: l;
+    background-color:#F5CBA7; height:545px; padding-top:8%;
+}
+ 
+#di2{
+    padding-top: 1%;
+    padding-left: 35%;
+}
+#caros{
+    height:200px ;
+    padding-top: 7%;
+}
+#h1l{
+    color:brown ;
+    text-shadow: 2px 5px 5px;
+}
+#about{
+    grid-area: ab;
+  
+}
+#abo{
+    width: 80%;
+    height: 150px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius:5%;
+    margin: auto;
+    box-shadow:5px 10px 10px;
+}
+
+/*------- library style --------*/
+#lib{
+    grid-area: li;
+}
+#lid{
+    width: 90%;
+    height: 160px;
+}
+#libo{
+    width: 80%;
+    height: 150px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius:5%;
+    margin: auto;
+    box-shadow:5px 10px 10px;
+    display:none;
+
+}
+#myCarousel{
+    transition: 10s;
+}
+.row{
+   grid-area: ro;
+}
+
+.box{
+  width: 190px;height: 250px; border-radius: 10%; 
+  border: 1px solid black; background-color: bisque;
+  box-shadow:10px 15px 10px;
+
+}
+#in,#in1 ,#in2, #in3 , #in4 ,#in5,#in6,#in7 ,#in8, #in9 , #in10 ,#in11,#sin,#sin1 ,#sin2, #sin3 , #sin4 ,#sin5,#sin6,#sin7 ,#sin8, #sin9 , #sin10 ,#sin11,#nin,#nin1 ,#nin2, #nin3 , #nin4 ,#nin5,#nin6,#nin7 ,#nin8, #nin9 , #nin10 ,#nin11,#min,#min1 ,#min2, #min3 , #min4 ,#min5,#min6,#min7 ,#min8, #min9 , #min10 ,#min11,#din,#din1 ,#din2, #din3 , #din4 ,#din5,#din6,#din7 ,#din8, #din9 , #din10 ,#din11,#ain,#ain1 ,#ain2, #ain3 , #ain4 ,#ain5,#ain6,#ain7 ,#ain8, #ain9 , #ain10 ,#ain11,#rin,#rin1 ,#rin2, #rin3 , #rin4 ,#rin5,#rin6,#rin7 ,#rin8, #rin9 , #rin10 ,#rin11{
+ display: none;
+ width: 150px;height: 150px; font-size:14px ; text-align: center; margin: auto;
+}
+#im ,#im1, #im2, #im3, #im4 , #im5,#im6 ,#im7, #im8, #im9, #im10 , #im11,#sim ,#sim1, #sim2, #sim3, #sim4 , #sim5,#sim6 ,#sim7, #sim8, #sim9, #sim10 , #sim11,#nim ,#nim1, #nim2, #nim3, #nim4 , #nim5,#nim6 ,#nim7, #nim8, #nim9, #nim10 , #nim11,#mim ,#mim1, #mim2, #mim3, #mim4 , #mim5,#mim6 ,#mim7, #mim8, #mim9, #mim10 , #mim11,#dim ,#dim1, #dim2, #dim3, #dim4 , #dim5,#dim6 ,#dim7, #dim8, #dim9, #dim10 , #dim11,#aim ,#aim1, #aim2, #aim3, #aim4 , #aim5,#aim6 ,#aim7, #aim8, #aim9, #aim10 , #aim11,#rim ,#rim1, #rim2, #rim3, #rim4 , #rim5,#rim6 ,#rim7, #rim8, #rim9, #rim10 , #rim11{
+    width: 185px;height: 247px;border-radius: 10%;
+}
+h3{
+    color: #d36709;
+}
+.btn{
+   width: 45%; height:25px;font-size:10px; text-align:center;
+}
+
+#lrcontrol{
+    height:250px; width:5px; 
+}
+::selection{
+    background-color: #d36709;
+    color: black;
+}
+
+
+/*------- contact section style --------*/
+#contact{
+    grid-area: co;
+    background-color:#F5CBA7; 
+    box-shadow:5px 10px 10px;
+
+}
+  
+/*------- footer style --------*/
+#fo{
+    grid-area: f;
+}
+#dfo{
+    width: auto;
+    height: 200px;
+}
+#sv :hover{
+  width:70px;
+  margin: auto;
+  padding: 1%;
+}
+
+#sv1{
+  background-color:blue ; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+  padding: 1%;
+}
+
+#sv2{
+  background-color:green; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+  padding: 1%;
+}
+
+#sv3{
+  background-color:rgb(131, 6, 89); width:50px;
+  border-radius: 30%; 
+  margin: auto;
+  padding: 1%;
+
+}
+
+#sv4{
+  background-color:blue ; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+   padding: 1%;
+  
+}
+
+/*------- media style --------*/
+
+@media only screen and (min-width: 250px) {
+    #di1{
+        height:510px; padding-top:8%;
+    }
+    #abo{
+    width: 80%;
+    height: 200px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius:5%;
+    margin: auto;
+    box-shadow:5px 10px 10px;
+}
+
+.row{
+    height:250px ;
+}
+}
+@media only screen and (max-width: 600px) {
+ .container{
+        font-size: 18px;
+    }
+ #na {
+     width:94%; 
+    }
+ #di1{
+    height:350px; padding-top:8%;
+    }
+ #di2 {
+    padding-left: 20%; padding-top: 10%;
+    }
+ #di2 img{
+    width: 50%;
+    }
+ #caros{
+    height:200px ;
+    padding-top: 10%;
+}
+.row{
+    height:250px ;
+}
+#dfo{
+    width: auto;
+    height: 200px;
+}
+#sv :hover{
+  width:70px;
+  margin: auto;
+  padding: 3%;
+}
+
+#sv1{
+  background-color:blue ; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+  padding: 3%;
+}
+
+#sv2{
+  background-color:green; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+  padding: 3%;
+}
+
+#sv3{
+  background-color:rgb(131, 6, 89); width:50px;
+  border-radius: 30%; 
+  margin: auto;
+  padding: 3%;
+
+}
+
+#sv4{
+  background-color:blue ; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+   padding: 3%;
+  
+}
+
+}
+@media only screen and (min-width: 500px) {
+    #di1{
+        height:510px; padding-top:8%;
+    }
+
+.row{
+    height:250px ;
+}
+}
+@media only screen and (min-width:1200px) {
+  #di1{
+        height:543px; padding-top:8%;
+    }
+
+.row{
+    height:250px ;
+}
+#dfo{
+    width: auto;
+    height: 200px;
+}
+#sv :hover{
+  width:70px;
+  margin: auto;
+  padding: 1%;
+}
+
+#sv1{
+  background-color:blue ; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+  padding: 1%;
+}
+
+#sv2{
+  background-color:green; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+  padding: 1%;
+}
+
+#sv3{
+  background-color:rgb(131, 6, 89); width:50px;
+  border-radius: 30%; 
+  margin: auto;
+  padding: 1%;
+
+}
+
+#sv4{
+  background-color:blue ; width:50px;
+  border-radius: 50%; 
+  margin: auto;
+   padding: 1%;
+  
+}
+}
+ </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <div class="container">
+           <!-- header codes-->
+        <!-- navbar codes-->
+     <nav class="navbar navbar-default navbar-fixed-top" id="na" >
+        <div id="naf">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#myPage"> Home </a></li>
+              <li><a href="#about"> About Us </a></li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#library"> library <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#books"> Books </a></li>
+                    <li><a href="#stories"> Stories </a></li>
+                    <li><a href="#novels"> Novels </a></li>
+                    <li><a href="#magazines"> Magazines </a></li>
+                    <li><a href="#documents "> Documents </a></li>
+                    <li><a href="#articles "> Articles </a></li>
+                    <li><a href="#researchs"> Researchs </a></li></ul>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+       </nav>
+
+        <!-----logo codes------>
+
+        <div id="di1"> 
+          <div id="di2">
+                <div><h1  id="h1l"><img src="down-removebg-preview.png"> nesny </h1></div>
+          </div>
+           <br>
+          <div id="caros">
+                <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" >
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                     <div class="item active">
+                     <h4> Books , Novels and stories <br><span> scientific , sports , cooking , Children , Historic </span></h4>
+                    </div>
+                    <div class="item">
+                      <h4> Magazines and Documents <br><span> scientific , sports , cooking , Children , Historic </span></h4>
+                    </div>
+                    <div class="item">
+                       <h4> Articles and Researchs <br><span> scientific , sports , cooking , Children , Historic </span></h4>
+                     </div>
+                  
+            
+                      <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                   </a>
+                   <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                  </a>
+              </div>
+          </div>
+    </div>
+
+      <br> <br> <br>
+
+
+      <!-----main codes------>
+     <!-- Container (About Section) -->
+      <div id="about">
+        <h1> About our web site </h1>
+        <div id="abo"><br>
+            <h2> Wenesny </h2>
+            <p> The best site to read and download books, stories, summaries and scientific articles, newspapers and magazines. </p>
+            </div>
+        </div>
+      
+
+        <br> <br> <br>
+
+      <!-- codes for library -->
+      <div id="lib">
+          <h1> Library </h1>
+           <h2 style="text-align:right ;"> << rule for reading </h2>
+          <div id="lid">
+             <div id="libo"><br>
+                 <p  id="pr"> "إذا لم تقرأ سوى الكتب التي يقرؤها سواك، فلن تفكر سوى بما يفكر به سواك" </p>
+                  <span> هاروكي موراكامي </span>
+             </div>
+            </div>
+         <!-- codes for books -->
+         <br> <br> <br>
+         <div id="books" class="container-fluid bg-grey" >
+            <h2> Books </h2>
+           <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" >
+            <!-- Indicators -->
+           
+           <!-- Wrapper for slides -->
+           <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="row">
+                    <div class="col-sm-2 " >
+                        <div class="box" id="b">
+                            <img src="https://www.baytalhikma2.org/wp-content/uploads/2022/12/cover_new.png" id="im">
+                            <div id="in">
+                            <h3 > عقل السوق </h3>
+                            <p > تاليف : مايكل شيرمر </p>
+                            <a href="https://www.baytalhikma2.org/wp-content/uploads/2022/12/TEXT_merged-3.pdf" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">  <i class="bx bx-download me-2"></i> download </a>                                                         </div>
+                        </div>
+                  </div>
+                    <div class="col-sm-2 " ><div class="box" id="b1">
+                        <img src="https://www.baytalhikma2.org/wp-content/uploads/2022/10/cover-scaled.jpg" id="im1">
+                        <div id="in1">
+                        <h3 > تعليقات عنيده </h3>
+                        <p > تاليف : تاير كوين </p>
+                        <a href="https://www.baytalhikma2.org/wp-content/uploads/2022/10/تعلقات-عنيدة.pdf" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">
+                            <i class="bx bx-download me-2"></i> download </a>                                    </div>
+                    </div></div>
+                    <div class="col-sm-2 "  ><div class="box " id="b2">
+                        <img src="https://www.baytalhikma2.org/wp-content/uploads/2022/09/Trade-and-Globalisation-An-Introduction-cover.jpg" id="im2">
+                        <div id="in2">
+                        <h3 > مقدمة إلى التجارة والعولمة </h3>
+                        <p > </p>
+                        <a href="https://www.baytalhikma2.org/wp-content/uploads/2022/09/مقدمة-إلى-التجارة-والعولمة..pdf" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>                                    </div>
+                    </div></div>
+                    <div class="col-sm-2 "  ><div class="box " id="b3">
+                        <img src="https://www.baytalhikma2.org/wp-content/uploads/2022/07/book-cover1-scaled.jpg" id="im3">
+                        <div id="in3">
+                        <h5 >الانفصال المديد، كيف أخرت الشريعة الإسلامية الشرق الأوسط</h5>
+                        <p > تاليف : تيمور كوران </p>
+                        <a href="https://www.baytalhikma2.org/wp-content/uploads/2022/07/الانفصال-المديد-تيمور-كوران-بيت-الحكمة-2.0_compressed.pdf" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>                                    </div>
+                    </div></div>
+                    <div class="col-sm-2 "  ><div class="box " id="b4">
+                        <img src="https://www.baytalhikma2.org/wp-content/uploads/2022/04/Sharma-Parvez-A-sinner-in-Mecca_poster.png" id="im4">
+                        <div id="in4">
+                        <h3 > آثـم فـي مكة </h3>
+                        <p > تاليف : بارفز شارما </p>
+                        <a href="https://www.baytalhikma2.org/wp-content/uploads/2022/04/A-Sinner-In-Mecca.pdf" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>         
+                        </div>
+                    </div></div>
+                    <div class="col-sm-2 " ><div class="box " id="b5"> <img src="https://www.baytalhikma2.org/wp-content/uploads/2022/01/cover-artoftrans.jpg" id="im5">
+                        <div id="in5">
+                        <h3 >فن الترجمة والتعريب</h3>
+                        <p >تاليف : عباد ديرانية </p>
+                        <a href="https://www.baytalhikma2.org/wp-content/uploads/2022/01/The-art-of-translation-ar-Hsoub-Academy-v1.0.pdf" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>         
+                        </div></div></div>
+               </div>
+            </div>
+            <div class="item">
+                <div class="row">
+                    <div class="col-sm-2 " >
+                        <div class="box" id="b6">
+                            <img src="https://www.baytalhikma2.org/wp-content/uploads/2021/09/9999999999999.png" id="im6">
+                            <div id="in6">
+                            <h3> التسامح الديني</h3>
+                            <p >تاليف فولتير </p>
+                            <a href="https://www.dropbox.com/s/amwzy94e7zw9miu/Religious-Tolerance-BY-VOLTAIRE-%D8%A7%D9%84%D8%AA%D8%B3%D8%A7%D9%85%D8%AD-%D8%A7%D9%84%D8%AF%D9%8A%D9%86%D9%8A-%D9%81%D9%88%D9%84%D8%AA%D9%8A%D8%B1.pdf?dl=0" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>        
+                            </div>
+                        </div>
+                  </div>
+                    <div class="col-sm-2 " ><div class="box" id="b7">
+                        <img src="https://www.baytalhikma2.org/wp-content/uploads/2021/09/95716864.svg" id="im7">
+                        <div id="in7">
+                        <h3 > النهضة العربية: في العصر الحاضر</h3>
+                        <p > تاليف : سكيب ارسلان </p>
+                            <a href="https://www.hindawi.org/books/95716864.pdf" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>        
+                        </div>
+                    </div></div>
+                    <div class="col-sm-2 "  ><div class="box " id="b8">
+                        <img src="1178.jpg" id="im8">
+                        <div id="in8">
+                        <h3 > قوه التفكير</h3>
+                        <p >د. إبراهيم الفقى</p>
+                        <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%82%D9%88%D9%87-%D8%A7%D9%84%D8%AA%D9%81%D9%83%D9%8A%D8%B1/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>        
+                        </div>
+                    </div></div>
+                    <div class="col-sm-2 "  ><div class="box " id="b9">
+                        <img src="nm0281.jpg" id="im9">
+                        <div id="in9">
+                        <h3 > ما يقوله كل جسد</h13>
+                        <p > قرأ هذا الكتاب وأطلق العنان لذكائك في تفسير السلوكيات غير الملفوظة</p>
+                        <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%85%D8%A7-%D9%8A%D9%82%D9%88%D9%84%D9%87-%D9%83%D9%84-%D8%AC%D8%B3%D8%AF-%D8%AC%D9%88-%D9%86%D8%A7%D9%81%D8%A7%D8%B1%D9%88.html/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>        
+                        </div>
+                    </div></div>
+                    <div class="col-sm-2 "  ><div class="box " id="b10">
+                        <img src="02104925-مقهى-الكتب-فوق-العرش.jpg" id="im10">
+                        <div id="in10">
+                        <h3 > فوق العرش </h3>
+                        <p > "فوق العرش “ "ليست جميع المسافات أمكنة “ الكاتبة المميزة.. سندس أحمد عرابي </p>
+                        <a href="https://www.kutubpdfbook.com/book/%D9%81%D9%88%D9%82-%D8%A7%D9%84%D8%B9%D8%B1%D8%B4/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>        
+                        </div>
+                    </div></div>
+                    <div class="col-sm-2 " ><div class="box " id="b11"> <img src="image 13.jpg" id="im11">
+                        <div id="in11">
+                        <h3>فكر وازدد ثراء</h3>
+                        <p > كتاب "فكر وازدد ثراء" أو "فكر تصبح غنيا" في جميع أنحاء العالم،</p>
+                        <a href="https://ia601409.us.archive.org/27/items/fkrwazddthra2/fkrwazdd%20thra2.mp3" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon"><i class="bx bx-download me-2"></i> download </a>        
+                        </div></div></div>
+               </div>
+            </div>
+          </div>
+        
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="lrcontrol">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="lrcontrol">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+      </div>
+         </div>
+       
+         <!-- codes for stories -->
+         <br> <br> <br>
+         <div id="stories" class="container-fluid bg-grey" >
+              <h2> stories </h2>
+              <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" >
+                 <!-- Wrapper for slides -->
+                 <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                         <div class="row"> 
+                              <div class="col-sm-2 " >
+                                 <div class="box" id="s">
+                                     <img src="Booksstream_k33_imgH3K2R8.jpg" id="sim">
+                                     <div id="sin">
+                                        <h3>ألزهايمر</h3>
+                                         <p > يسرد لنا الكاتب غازي القصبي قصة ألزهايمر ولكنه يمزجها بأحداث شيقة ليعقوب </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AC%D8%A7%D8%B0%D8%A8%D9%8A%D8%A9-%D9%85%D8%AF%D9%87%D8%B4%D8%A9-%D9%85%D9%86-%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%AD%D8%A9-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D9%82%D9%85%D8%B1-%D9%84%D9%80-%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%88%D8%A7-%D8%B1%D9%88%D8%AA%D9%86.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download </a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A3%D9%84%D8%B2%D9%87%D8%A7%D9%8A%D9%85%D8%B1/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>
+                                     </div>
+                                 </div>
+                             </div>
+                    
+                             <div class="col-sm-2 " >
+                                 <div class="box" id="s1">
+                                     <img src="Books_LIITMHR.jpg" id="sim1">
+                                      <div id="sin1">
+                                          <h3>الذى اقترب و رأى</h3>
+                                           <p >هذا الكتاب عبارة عن قصص قصيرة أكثر من رائعة م</p>
+                                           <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%84%D8%B0%D9%89-%D8%A7%D9%82%D8%AA%D8%B1%D8%A8-%D9%88-%D8%B1%D8%A3%D9%89/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                           <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%84%D8%B0%D9%89-%D8%A7%D9%82%D8%AA%D8%B1%D8%A8-%D9%88-%D8%B1%D8%A3%D9%89/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>        
+                                        </div>
+                                  </div>
+                        
+                              </div>
+                             <div class="col-sm-2 "  >
+                                  <div class="box " id="s2">
+                                      <img src="6082944.jpg" id="sim2">
+                                      <div id="sin2">
+                                          <h3>صديقى لا تأكل نفسك</h3>
+                                          <p > لكتاب مجموعة من المقالات الخفيفة والممتعة</p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%B5%D8%AF%D9%8A%D9%82%D9%89-%D9%84%D8%A7-%D8%AA%D8%A3%D9%83%D9%84-%D9%86%D9%81%D8%B3%D9%83/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%B5%D8%AF%D9%8A%D9%82%D9%89-%D9%84%D8%A7-%D8%AA%D8%A3%D9%83%D9%84-%D9%86%D9%81%D8%B3%D9%83/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>       
+                                         
+                                        </div>
+                                 </div>
+                              </div>
+                             <div class="col-sm-2 "  >
+                                  <div class="box " id="s3">
+                                      <img src="wakanhohelm.jpg" id="sim3">
+                                       <div id="sin3">
+                                          <h3>وكأنه حلم</h3>
+                                           <p >هذه المجموعة القصصية وكأنه حلم هى المجموعة البكر للكاتبه هاجر الأحمد </p>
+                                            <a href="https://www.kutubpdfbook.com/book/%D9%88%D9%83%D8%A3%D9%86%D9%87-%D8%AD%D9%84%D9%85/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                            <a href="https://www.kutubpdfbook.com/book/%D9%88%D9%83%D8%A3%D9%86%D9%87-%D8%AD%D9%84%D9%85/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>     
+                                    
+                                        </div>
+                                 </div>
+                              </div>
+                             <div class="col-sm-2 "  >
+                                  <div class="box " id="s4">
+                                     <img src="sh01401.jpg" id="sim4">
+                                     <div id="sin4">
+                                         <h1 >الذاكرة و الموت </h1>
+                                         <p > كتب سعد الله ونوس «عن الذاكرة والموت» في تسعة نصوص سردية منقسمة إلى قسمين</p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%B0%D8%A7%D9%83%D8%B1%D8%A9-%D9%88-%D8%A7%D9%84%D9%85%D9%88%D8%AA/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                          <a href="https://www.kutubpdfbook.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%B0%D8%A7%D9%83%D8%B1%D8%A9-%D9%88-%D8%A7%D9%84%D9%85%D9%88%D8%AA/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>        
+                                                
+                                        </div>
+                                  </div>
+                              </div>
+                             <div class="col-sm-2 " >
+                                  <div class="box " id="s5"> <img src="sh01608.jpg" id="sim5">
+                                       <div id="sin5">
+                                         <h3>ليس هناك ما يبهج</h3>
+                                          <p > تأليف : عبده خال</p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D9%84%D9%8A%D8%B3-%D9%87%D9%86%D8%A7%D9%83-%D9%85%D8%A7-%D9%8A%D8%A8%D9%87%D8%AC/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                          <a href="https://www.kutubpdfbook.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D9%84%D9%8A%D8%B3-%D9%87%D9%86%D8%A7%D9%83-%D9%85%D8%A7-%D9%8A%D8%A8%D9%87%D8%AC/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>               
+                                        
+                                        </div>
+                                  </div>
+                             </div>
+                          </div>
+                      </div>
+                       
+                
+           
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-2 " >
+                                    <div class="box" id="s6">
+                                       <img src="sh01623.jpg" id="sim6">
+                                       <div id="sin6">
+                                           <h3> المسافر الابدي </h3>
+                                           <p >تأليف : علاء الديب</p>
+                                            <a href="https://www.kutubpdfbook.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D9%81%D8%B1-%D8%A7%D9%84%D8%A3%D8%A8%D8%AF%D9%8A/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                            <a href="https://www.kutubpdfbook.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D9%81%D8%B1-%D8%A7%D9%84%D8%A3%D8%A8%D8%AF%D9%8A/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                     
+                                                    
+                                        </div>
+                                  </div>
+                              </div>
+                              
+                             <div class="col-sm-2 " >
+                                    <div class="box" id="s7">
+                                        <img src="albab-fe-mosmar.png" id="sim7">
+                                        <div id="sin7">
+                                          <h3> الباب في المسمار</h3>
+                                           <p >  نزار,شاب عراقى كغيره من الشباب الذين أصبحت الهجرة لهم هى المناص الوحيد لحياة كريمة,</p>
+                                           <a href="https://www.kutubpdfbook.com/book/%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A8%D8%A7%D8%A8-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D8%B3%D9%85%D8%A7%D8%B1/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                           <a href="https://www.kutubpdfbook.com/book/%D9%85%D9%83%D8%AA%D8%A8%D8%A9-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A8%D8%A7%D8%A8-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D8%B3%D9%85%D8%A7%D8%B1/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>       
+                                    
+                                        </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-2 "  >
+                                   <div class="box " id="s8">
+                                        <img src="12205032-مقهى-الكتب-الرسالة-1.jpg" id="sim8">
+                                        <div id="sin8">
+                                            <h3> الرسالة </h3>
+                                            <p > طالب جامعي خجول لم يستطع مصارحة زميلته بحبه "فدس" لها رسالة غرامية في حقيبتها اليدوية أثناء سفرها معا على متن حافلة نقل عمومي في اتجاه بلدتها.</p>
+                                             <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9-1/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                             <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%84%D8%A9-1/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>       
+                                            </div>
+                                    </div>
+                              </div>
+                                    <div class="col-sm-2 "  >
+                                        <div class="box " id="s9">
+                                            <img src="03204756-مقهى-الكتب-آدم-وحواء.png" id="sim9">
+                                            <div id="sin9">
+                                               <h3> آدم وحواء</h3>
+                                               <p > تأليف : عبد الحميد جودة السحار</p>
+                                               <a href="https://www.kutubpdfbook.com/book/%D8%A2%D8%AF%D9%85-%D9%88%D8%AD%D9%88%D8%A7%D8%A1/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                               <a href="https://www.kutubpdfbook.com/book/%D8%A2%D8%AF%D9%85-%D9%88%D8%AD%D9%88%D8%A7%D8%A1/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>      
+                                            </div>
+                                      </div>
+                                   </div>
+                                  <div class="col-sm-2 "  >
+                                     <div class="box " id="s10">
+                                         <img src="05000614-مقهى-الكتب-أيها-السرمدي-لا-تقاوم-الصحراء.jpeg" id="sim10">
+                                         <div id="sin10">
+                                             <h3> أيها السرمدي لا تقاوم الصحراء</h3>
+                                              <p > تأليف : محمد المنصور الشقحاء </p>
+                                              <a href="https://www.kutubpdfbook.com/book/%D8%A3%D9%8A%D9%87%D8%A7-%D8%A7%D9%84%D8%B3%D8%B1%D9%85%D8%AF%D9%8A-%D9%84%D8%A7-%D8%AA%D9%82%D8%A7%D9%88%D9%85-%D8%A7%D9%84%D8%B5%D8%AD%D8%B1%D8%A7%D8%A1/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                              <a href="https://www.kutubpdfbook.com/book/%D8%A3%D9%8A%D9%87%D8%A7-%D8%A7%D9%84%D8%B3%D8%B1%D9%85%D8%AF%D9%8A-%D9%84%D8%A7-%D8%AA%D9%82%D8%A7%D9%88%D9%85-%D8%A7%D9%84%D8%B5%D8%AD%D8%B1%D8%A7%D8%A1/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>        
+                                            </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-2 " >
+                                      <div class="box " id="s11"> <img src="11214759-مقهى-الكتب-أزوخين-قصة-قصيرة.jpg" id="sim11">
+                                         <div id="sin11">
+                                              <h3> أزوخين - قصة قصيرة</h3>
+                                               <p >أنا حاتم صبري سلامة طبيب نفسي بارز. هذا بالإضافة إلى أنني أعمل محققًا في القضايا الخارقة للطبيعة</p>
+                                              <a href="https://www.kutubpdfbook.com/book/%D8%A3%D8%B2%D9%88%D8%AE%D9%8A%D9%86-%D9%82%D8%B5%D8%A9-%D9%82%D8%B5%D9%8A%D8%B1%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">download</a>
+                                              <a href="https://www.kutubpdfbook.com/book/%D8%A3%D8%B2%D9%88%D8%AE%D9%8A%D9%86-%D9%82%D8%B5%D8%A9-%D9%82%D8%B5%D9%8A%D8%B1%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>    
+                                            </div>
+                                      </div>
+                                  </div>
+                          </div>
+            
+                      </div>
+                 </div>  
+                   
+           
+                  <!-- Left and right controls -->
+                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="lrcontrol">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                  </a>
+                 <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="lrcontrol">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                 </a>
+              </div>
+          </div>
+         
+
+          <!-- codes for novels -->
+          <br> <br> <br>
+          <div id="novels" class="container-fluid bg-grey" >
+             <h2> Novels </h2>
+             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" >
+                 <!-- Wrapper for slides -->
+                 <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <div class="row">
+                        <div class="col-sm-2 " >
+                            <div class="box" id="n">
+                                <img src="Booksstream_k33_imgHMH34.jpg" id="nim">
+                                <div id="nin">
+                                   <h3>غضب العاصفة</h3>
+                                   <p> العاصفة The perfect storm" قصة حقيقية عاشها رجال شجعان في صراعهم مع البحر</p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%BA%D8%B6%D8%A8-%D8%A7%D9%84%D8%B9%D8%A7%D8%B5%D9%81%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%BA%D8%B6%D8%A8-%D8%A7%D9%84%D8%B9%D8%A7%D8%B5%D9%81%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>
+                                        </div>
+                            </div>
+                        </div>
+               
+                        <div class="col-sm-2 " >
+                            <div class="box" id="n1">
+                                <img src="Booksstream_k33_imgHMH37.jpg" id="nim1">
+                                 <div id="nin1">
+                                   <h3> قلبان في عاصفة </h3>
+                                     <p > الرواية تختلف عما قبلها من الروايات التاريخية ، بأن حوادثها كلها تجري فوق سطح البحر الأبيض المتوسط</p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%82%D9%84%D8%A8%D8%A7%D9%86-%D9%81%D9%8A-%D8%B9%D8%A7%D8%B5%D9%81%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%82%D9%84%D8%A8%D8%A7%D9%86-%D9%81%D9%8A-%D8%B9%D8%A7%D8%B5%D9%81%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                 </div>
+                             </div>
+                         </div>
+                        <div class="col-sm-2 "  >
+                             <div class="box " id="n2">
+                                 <img src="19880.jpg" id="nim2">
+                                 <div id="nin2">
+                                    <h3> مفارقات الحياة </h3>
+                                     <p > في ليلة رطبة مظلمة من ليالى ديسمبر ، بعد ست سنوات من سفر الجوانا ، كانت الريح تهدر من البحر </p>
+                                        <a href="https://www.kutubpdfbook.com/book/%D9%85%D9%81%D8%A7%D8%B1%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%85%D9%81%D8%A7%D8%B1%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                  </div>
+                            </div>
+                         </div>
+                        <div class="col-sm-2 "  >
+                             <div class="box " id="n3">
+                                 <img src="Booksstream_k33_imgHMH44.jpg" id="nim3">
+                                  <div id="nin3">
+                                    <h3> وبعد </h3>
+                                      <p > رواية"وبعد" هى أول روايه لغيوم ميسو" تترجم إلى العربية.وترجمت إلى أكثر من عشرين لغة وتحولت إلى فيلم </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%88-%D8%A8%D8%B9%D8%AF/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%88-%D8%A8%D8%B9%D8%AF/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                </div>
+                            </div>
+                         </div>
+                        <div class="col-sm-2 "  >
+                             <div class="box " id="n4">
+                                <img src="Booksstream_k33_imgH164.jpg" id="nim4">
+                                <div id="nin4">
+                                   <h3> القلعة البيضاء </h3>
+                                    <p > عد هذه الروايه من الاعمال الادبية التى تمثل جسر بين الهوية التركية و الثقافة الغربية تقع أحداث الرواية في القرن السابع عشر الميلادي،</p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%84%D9%82%D9%84%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D9%8A%D8%B6%D8%A7%D8%A1/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%84%D9%82%D9%84%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D9%8A%D8%B6%D8%A7%D8%A1/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                 </div>
+                             </div>
+                         </div>
+                        <div class="col-sm-2 " >
+                             <div class="box " id="n5"> <img src="Booksstream_k33_imgH167.jpg" id="nim5">
+                                  <div id="nin5">
+                                    <h3> جودت بيك وأبناؤه</h3>
+                                     <p > تعتبر رواية "جودت بيك وأبناؤه" التي صدرت 1982 أول رواية لأورهان باموك</p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AC%D9%88%D8%AF%D8%AA-%D8%A8%D9%8A%D9%83-%D9%88%D8%A3%D8%A8%D9%86%D8%A7%D8%A4%D9%87/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AC%D9%88%D8%AF%D8%AA-%D8%A8%D9%8A%D9%83-%D9%88%D8%A3%D8%A8%D9%86%D8%A7%D8%A4%D9%87/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                 </div>
+                             </div>
+                             </div></div>
+                       </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-2 " >
+                                    <div class="box" id="n6">
+                                       <img src="Books_LI262.jpg" id="nim6">
+                                       <div id="nin6">
+                                          <h3> تاجر البندقية</h3>
+                                           <p >تاجر البندقية اهم او تعد من اهم اعمال وليم شكسبير</p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%A7%D8%AC%D8%B1-%D8%A7%D9%84%D8%A8%D9%86%D8%AF%D9%82%D9%8A%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%A7%D8%AC%D8%B1-%D8%A7%D9%84%D8%A8%D9%86%D8%AF%D9%82%D9%8A%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                                  </div>
+                              </div>
+                              
+                             <div class="col-sm-2 " >
+                                    <div class="box" id="n7">
+                                        <img src="Books_IT67MH.jpg" id="nim7">
+                                        <div id="nin7">
+                                           <h3> العاصمة القديمة </h3>
+                                           <p > الكتاب إلى جانب كونه حائز على جائزة نوبل (1968) فإنه إطلالة على الأدب الياباني</p>
+                                           <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%84%D8%B9%D8%A7%D8%B5%D9%85%D8%A9-%D8%A7%D9%84%D9%82%D8%AF%D9%8A%D9%85%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%84%D8%B9%D8%A7%D8%B5%D9%85%D8%A9-%D8%A7%D9%84%D9%82%D8%AF%D9%8A%D9%85%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-2 "  >
+                                   <div class="box " id="n8">
+                                        <img src="Books_IT683.jpg" id="nim8">
+                                        <div id="nin8">
+                                           <h3> ايزابيل ثلاثة مراكب ومشعوذ</h3>
+                                            <p > في آخر مشهد من هذه المسرحية، وبينما تغني الجوقة، آخر فقرات الأغنية، يؤخذ المحكوم، </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%8A%D8%B2%D8%A7%D8%A8%D9%8A%D9%84-%D8%AB%D9%84%D8%A7%D8%AB%D8%A9-%D9%85%D8%B1%D8%A7%D9%83%D8%A8-%D9%88%D9%85%D8%B4%D8%B9%D9%88%D8%B0/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A7%D9%8A%D8%B2%D8%A7%D8%A8%D9%8A%D9%84-%D8%AB%D9%84%D8%A7%D8%AB%D8%A9-%D9%85%D8%B1%D8%A7%D9%83%D8%A8-%D9%88%D9%85%D8%B4%D8%B9%D9%88%D8%B0/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                        </div>
+                                    </div>
+                              </div>
+                                    <div class="col-sm-2 "  >
+                                        <div class="box " id="n9">
+                                            <img src="Books_IT7IT4.jpg" id="nim9">
+                                            <div id="nin9">
+                                              <h3> نصف حياة </h3>
+                                               <p > لم أكن أدري عن ماذا سأتحدث . لم أستطع أن أقول " أين تعيشين ؟ ماذا يعمل والدك ؟ هل لديك أخوة ؟ كان يمكن لكل هذه الأسئلة أن تسبب المتاعب .</p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%86%D8%B5%D9%81-%D8%AD%D9%8A%D8%A7%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%86%D8%B5%D9%81-%D8%AD%D9%8A%D8%A7%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                          </div>
+                                      </div>
+                                   </div>
+                                  <div class="col-sm-2 "  >
+                                     <div class="box " id="n10">
+                                         <img src="Books_IT7IT2.jpg" id="nim10">
+                                         <div id="nin10">
+                                            <h3> موت فوضوي صدفة </h3>
+                                              <p >الممثل والكاتب المسرحي داريو فو الحاصل على نوبل في الأدب عام 1997 المسرحية عمل ثوري بكل المقاييس </p>
+                                             <a href="https://www.kutubpdfbook.com/book/%D9%85%D9%88%D8%AA-%D9%81%D9%88%D8%B6%D9%88%D9%8A-%D8%B5%D8%AF%D9%81%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                             <a href="https://www.kutubpdfbook.com/book/%D9%85%D9%88%D8%AA-%D9%81%D9%88%D8%B6%D9%88%D9%8A-%D8%B5%D8%AF%D9%81%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                          </div>
+                                      </div>
+                                   </div>
+                                   <div class="col-sm-2 " >
+                                      <div class="box " id="n11"> <img src="tream.com_k3mbooks2ft7om_M8R0.jpg" id="nim11">
+                                         <div id="nin11">
+                                             <h3> مخزن الأعضاء البشرية </h3>
+                                               <p >أرنالدور أندريداسون يعودنا في الرواية علي فن راقي رواية مخزن الأعضاء البشرية هي رواية بوليسية</p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%85%D8%AE%D8%B2%D9%86-%D8%A7%D9%84%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D9%8A%D8%A9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%85%D8%AE%D8%B2%D9%86-%D8%A7%D9%84%D8%A3%D8%B9%D8%B6%D8%A7%D8%A1-%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D9%8A%D8%A9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                          </div>
+                                      </div>
+                                  </div>
+                         
+            
+                      </div>
+                 </div>  
+                 <!-- Left and right controls -->
+                 <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="lrcontrol">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                 <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="lrcontrol">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+              </div>
+         </div>
+        </div>
+
+         <!-- codes for magazieen -->
+         <br> <br> <br>
+         <div id="magazines" class="container-fluid bg-grey" >
+            <h2> Magazines </h2>
+            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" >
+                <!-- Wrapper for slides -->
+                 <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                         <div class="row">
+                            <div class="col-sm-2 " >
+                                <div class="box" id="m">
+                                    <img src="sh00603.jpg" id="mim">
+                                    <div id="min">
+                                       <h3> آفاق العلم . أبريل + مايو 2010</h3>
+                                        <p >تأليف : مجلة آفاق العلم</p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%A3%D8%A8%D8%B1%D9%8A%D9%84-%D9%85%D8%A7%D9%8A%D9%88-2010/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%A3%D8%A8%D8%B1%D9%8A%D9%84-%D9%85%D8%A7%D9%8A%D9%88-2010/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                      </div>
+                                </div>
+                            </div>
+                   
+                            <div class="col-sm-2 " >
+                                <div class="box" id="m1">
+                                    <img src="sh00606.jpg" id="mim1">
+                                     <div id="min1">
+                                       <h3> آفاق العلم . أغسطس + سبتمبر 2011 </h3>
+                                         <p >  تأليف : مجلة آفاق العلم </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3-%D8%B3%D8%A8%D8%AA%D9%85%D8%A8%D8%B1-2011/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3-%D8%B3%D8%A8%D8%AA%D9%85%D8%A8%D8%B1-2011/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="m2">
+                                     <img src="sh00602.jpg" id="mim2">
+                                     <div id="min2">
+                                        <h3> آفاق العلم - أبريل + مايو 2012 </h3>
+                                         <p > تأليف : مجلة آفاق العلم</p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%A3%D8%A8%D8%B1%D9%8A%D9%84-%D9%85%D8%A7%D9%8A%D9%88-2012/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%A3%D8%A8%D8%B1%D9%8A%D9%84-%D9%85%D8%A7%D9%8A%D9%88-2012/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                        </div>
+                                </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="m3">
+                                     <img src="sh00612.jpg" id="mim3">
+                                      <div id="min3">
+                                        <h3> آفاق العلم . سبتمبر + أكتوبر 2010</h3>
+                                          <p > تأليف : مجلة آفاق العلم </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%B3%D8%A8%D8%AA%D9%85%D8%A8%D8%B1-%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1-2010/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D8%B3%D8%A8%D8%AA%D9%85%D8%A8%D8%B1-%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1-2010/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                      </div>
+                                </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="m4">
+                                    <img src="sh00618.jpg" id="mim4">
+                                    <div id="min4">
+                                       <h3>آفاق العلم . فبراير 2006 </h3>
+                                        <p >  تأليف : مجلة آفاق العلم </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%81%D8%A8%D8%B1%D8%A7%D9%8A%D8%B1-2006/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%81%D8%A8%D8%B1%D8%A7%D9%8A%D8%B1-2006/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                             </div>
+                            <div class="col-sm-2 " >
+                                 <div class="box " id="m5"> <img src="sh00628.jpg" id="mim5">
+                                      <div id="min5">
+                                        <h3> آفاق العلم . مايو+ يونيو 2009 </h3>
+                                         <p >  تأليف : مجلة آفاق العلم </p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%85%D8%A7%D9%8A%D9%88-%D9%8A%D9%88%D9%86%D9%8A%D9%88-2009/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%85%D8%A7%D9%8A%D9%88-%D9%8A%D9%88%D9%86%D9%8A%D9%88-2009/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                                 </div>
+                         </div>
+                    </div>
+                
+           
+                   <div class="item">
+                       <div class="row">
+                        <div class="col-sm-2 " >
+                            <div class="box" id="m6">
+                               <img src="sh00636.jpg" id="mim6">
+                               <div id="min6">
+                                  <h3> آفاق العلم . يناير 2006</h3>
+                                   <p > تأليف : مجلة آفاق العلم </p>
+                                        <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%8A%D9%86%D8%A7%D9%8A%D8%B1-2006/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%8A%D9%86%D8%A7%D9%8A%D8%B1-2006/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                </div>
+                          </div>
+                      </div>
+                      
+                     <div class="col-sm-2 " >
+                            <div class="box" id="m7">
+                                <img src="sh00641.jpg" id="mim7">
+                                <div id="min7">
+                                   <h3> آفاق العلم . يوليو + أغسطس 2012 </h3>
+                                   <p >تأليف : مجلة آفاق العلم </p>
+                                   <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%8A%D9%88%D9%84%D9%8A%D9%88-%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3-2012/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                   <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%8A%D9%88%D9%84%D9%8A%D9%88-%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3-2012/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                  </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-2 "  >
+                           <div class="box " id="m8">
+                                <img src="sh00639.jpg" id="mim8">
+                                <div id="min8">
+                                   <h3> آفاق العلم . يوليو + أغسطس 2009 </h3>
+                                    <p > تأليف : مجلة آفاق العلم</p>
+                                           <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%8A%D9%88%D9%84%D9%8A%D9%88-%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3-2009/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%A2%D9%81%D8%A7%D9%82-%D8%A7%D9%84%D8%B9%D9%84%D9%85-%D9%8A%D9%88%D9%84%D9%8A%D9%88-%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3-2009/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                   </div>
+                            </div>
+                      </div>
+                            <div class="col-sm-2 "  >
+                                <div class="box " id="m9">
+                                    <img src="pdf-books-org-7JCXJ.jpg" id="mim9">
+                                    <div id="min9">
+                                      <h3> دائرة معارف القرن العشرين - المجلد الأول </h3>
+                                       <p > تأليف : محمد فريد وجدي </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D9%85%D8%B9%D8%A7%D8%B1%D9%81-%D8%A7%D9%84%D9%82%D8%B1%D9%86-%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D8%AD%D9%85%D8%AF-%D9%81%D8%B1%D9%8A%D8%AF-%D9%88%D8%AC%D8%AF%D9%8A.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D9%85%D8%B9%D8%A7%D8%B1%D9%81-%D8%A7%D9%84%D9%82%D8%B1%D9%86-%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF-%D8%A7%D9%84%D8%A3%D9%88%D9%84-%D9%85%D8%AD%D9%85%D8%AF-%D9%81%D8%B1%D9%8A%D8%AF-%D9%88%D8%AC%D8%AF%D9%8A.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                           </div>
+                          <div class="col-sm-2 "  >
+                             <div class="box " id="m10">
+                                 <img src="pdf-books-org-7JLFS.jpg" id="mim10">
+                                 <div id="min10">
+                                    <h3> دائرة معارف القرن العشرين - المجلد الثاني </h3>
+                                      <p > تأليف : محمد فريد وجدي </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D9%85%D8%B9%D8%A7%D8%B1%D9%81-%D8%A7%D9%84%D9%82%D8%B1%D9%86-%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%85%D8%AD%D9%85%D8%AF-%D9%81%D8%B1%D9%8A%D8%AF-%D9%88%D8%AC%D8%AF%D9%8A.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D9%85%D8%B9%D8%A7%D8%B1%D9%81-%D8%A7%D9%84%D9%82%D8%B1%D9%86-%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%85%D8%AD%D9%85%D8%AF-%D9%81%D8%B1%D9%8A%D8%AF-%D9%88%D8%AC%D8%AF%D9%8A.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-2 " >
+                              <div class="box " id="m11"> <img src="pdf-books-org-7JQGB.jpg" id="mim11">
+                                 <div id="min11">
+                                     <h3> دائرة معارف القرن العشرين - المجلد الثالث </h3>
+                                       <p > تأليف : محمد فريد وجدي </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D9%85%D8%B9%D8%A7%D8%B1%D9%81-%D8%A7%D9%84%D9%82%D8%B1%D9%86-%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D9%85%D8%AD%D9%85%D8%AF-%D9%81%D8%B1%D9%8A%D8%AF-%D9%88%D8%AC%D8%AF%D9%8A.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D9%85%D8%B9%D8%A7%D8%B1%D9%81-%D8%A7%D9%84%D9%82%D8%B1%D9%86-%D8%A7%D9%84%D8%B9%D8%B4%D8%B1%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%AF-%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB-%D9%85%D8%AD%D9%85%D8%AF-%D9%81%D8%B1%D9%8A%D8%AF-%D9%88%D8%AC%D8%AF%D9%8A.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                       </div>
+                   </div>
+                </div>
+           
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="lrcontrol">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="lrcontrol">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+         </div>
+        </div>
+
+         <!-- codes for documents -->
+         <br> <br> <br>
+         <div id="documents" class="container-fluid bg-grey" >
+            <h2> Documents</h2>
+            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" >
+                 <!-- Wrapper for slides -->
+                 <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                         <div class="row">
+                            <div class="col-sm-2 " >
+                                <div class="box" id="d">
+                                    <img src="Alkottob-RR4YX.jpg" id="dim">
+                                    <div id="din">
+                                       <h3> جاذبية مدهشة - من التفاحة إلى القمر </h3>
+                                        <p > على مدار آلاف السنوات، كانت الجاذبية جزءًا طبيعيًّا من حياتنا اليومية، حتى إنه لم يأبَهْ أحدٌ بطرحها موضوعًا للنقاش. ولكن الأمور تغيَّرت في القرن السابع عشر </p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AC%D8%A7%D8%B0%D8%A8%D9%8A%D8%A9-%D9%85%D8%AF%D9%87%D8%B4%D8%A9-%D9%85%D9%86-%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%AD%D8%A9-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D9%82%D9%85%D8%B1-%D9%84%D9%80-%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%88%D8%A7-%D8%B1%D9%88%D8%AA%D9%86.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%AC%D8%A7%D8%B0%D8%A8%D9%8A%D8%A9-%D9%85%D8%AF%D9%87%D8%B4%D8%A9-%D9%85%D9%86-%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%AD%D8%A9-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D9%82%D9%85%D8%B1-%D9%84%D9%80-%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%88%D8%A7-%D8%B1%D9%88%D8%AA%D9%86.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                      </div>
+                                </div>
+                            </div>
+                   
+                            <div class="col-sm-2 " >
+                                <div class="box" id="d1">
+                                    <img src="download.jpg" id="dim1">
+                                     <div id="din1">
+                                       <h3> الذرة والقنابل الذرية </h3>
+                                         <p > «الذرة والقنابل الذرية» واحدة من القضايا الشائكة التي تشغل العلماء، والمشتغلين بالسياسة الدولية؛ باعتبارها مأساة تؤرق العالم </p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%B0%D8%B1%D8%A9-%D9%88%D8%A7%D9%84%D9%82%D9%86%D8%A7%D8%A8%D9%84-%D8%A7%D9%84%D8%B0%D8%B1%D9%8A%D8%A9-%D9%84%D9%80-%D8%B9%D9%84%D9%8A-%D9%85%D8%B5%D8%B7%D9%81%D9%89-%D9%85%D8%B4%D8%B1%D9%81%D8%A9.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%B0%D8%B1%D8%A9-%D9%88%D8%A7%D9%84%D9%82%D9%86%D8%A7%D8%A8%D9%84-%D8%A7%D9%84%D8%B0%D8%B1%D9%8A%D8%A9-%D9%84%D9%80-%D8%B9%D9%84%D9%8A-%D9%85%D8%B5%D8%B7%D9%81%D9%89-%D9%85%D8%B4%D8%B1%D9%81%D8%A9.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="d2">
+                                     <img src="Alkottob-RTZ5X.jpg" id="dim2">
+                                     <div id="din2">
+                                        <h3> نهاية كل شيء - من الإنسان إلى الكون </h3>
+                                         <p > كل إنسان يعلم يقينًا أنه فانٍ لا محالة، رغم أننا نحاول دومًا التغافل عن هذه الحقيقة. ومع هذا فإن قليلين فقط هم من يعرفون </p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%86%D9%87%D8%A7%D9%8A%D8%A9-%D9%83%D9%84-%D8%B4%D9%8A%D8%A1-%D9%85%D9%86-%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D9%83%D9%88%D9%86-%D9%84%D9%80-%D9%83%D8%B1%D9%8A%D8%B3-%D8%A5%D9%85%D8%A8%D9%8A.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%86%D9%87%D8%A7%D9%8A%D8%A9-%D9%83%D9%84-%D8%B4%D9%8A%D8%A1-%D9%85%D9%86-%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D9%83%D9%88%D9%86-%D9%84%D9%80-%D9%83%D8%B1%D9%8A%D8%B3-%D8%A5%D9%85%D8%A8%D9%8A.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                        </div>
+                                </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="d3">
+                                     <img src="nb189.jpg" id="dim3">
+                                      <div id="din3">
+                                        <h3> الاوهام البصرية - فنها وعلمها </h3>
+                                          <p >  الكتاب هو محاولة من مؤلفه نيكولاس ويد لردم الفجوة بين الطريقة التي يتبعها الفنان فى استغلال ظواهر الوهم المرئى والطريقة التى يتبعها العالم </p>
+                                          <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D9%88%D9%87%D8%A7%D9%85-%D8%A7%D9%84%D8%A8%D8%B5%D8%B1%D9%8A%D8%A9-%D9%81%D9%86%D9%87%D8%A7-%D9%88%D8%B9%D9%84%D9%85%D9%87%D8%A7-%D9%84%D9%80-%D9%86%D9%8A%D9%83%D9%88%D9%84%D8%A7%D8%B3-%D9%88%D9%8A%D8%AF.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A7%D9%88%D9%87%D8%A7%D9%85-%D8%A7%D9%84%D8%A8%D8%B5%D8%B1%D9%8A%D8%A9-%D9%81%D9%86%D9%87%D8%A7-%D9%88%D8%B9%D9%84%D9%85%D9%87%D8%A7-%D9%84%D9%80-%D9%86%D9%8A%D9%83%D9%88%D9%84%D8%A7%D8%B3-%D9%88%D9%8A%D8%AF.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                      </div>
+                                </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="d4">
+                                    <img src="alkottob-com-pdf-0RKY337.jpg" id="dim4">
+                                    <div id="din4">
+                                       <h3> البحث عن قطة شرودنجر - الفيزياء الكمية والواقع </h3>
+                                        <p >هذا الكتاب الشخص الذى لا يصدم بنظريه الكم لم يفهمها </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86-%D9%82%D8%B7%D8%A9-%D8%B4%D8%B1%D9%88%D8%AF%D9%86%D8%AC%D8%B1-%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1-%D8%A7%D9%84%D9%83%D9%85%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%88%D8%A7%D9%82%D8%B9/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%A8%D8%AD%D8%AB-%D8%B9%D9%86-%D9%82%D8%B7%D8%A9-%D8%B4%D8%B1%D9%88%D8%AF%D9%86%D8%AC%D8%B1-%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1-%D8%A7%D9%84%D9%83%D9%85%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D9%88%D8%A7%D9%82%D8%B9/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                             </div>
+                            <div class="col-sm-2 " >
+                                 <div class="box " id="d5"> <img src="nb290.jpg" id="dim5">
+                                      <div id="din5">
+                                        <h3> نظرية النسبية </h3>
+                                         <p > يحتوي الكتاب عن أجزاء ويندرج تحتها فصول يخص الأجزاء، الجزء الاول: نظرية النسبية الخاصة، الجزء الثاني: نظرية النسبية العامة، الجزء الثالث : تأملات في الكون ككل  </p>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%86%D8%B8%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D9%86%D8%B3%D8%A8%D9%8A%D8%A9-%D9%84%D9%80-%D8%A2%D9%84%D8%A8%D8%B1%D8%AA-%D8%A2%D9%8A%D9%86%D8%B4%D8%AA%D8%A7%D9%8A%D9%86.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%86%D8%B8%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D9%86%D8%B3%D8%A8%D9%8A%D8%A9-%D9%84%D9%80-%D8%A2%D9%84%D8%A8%D8%B1%D8%AA-%D8%A2%D9%8A%D9%86%D8%B4%D8%AA%D8%A7%D9%8A%D9%86.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                                 </div>
+                         </div>
+                    </div>
+                
+           
+                   <div class="item">
+                       <div class="row">
+                        <div class="col-sm-2 " >
+                            <div class="box" id="d6">
+                               <img src="Alkottob-RS3WW.jpg" id="dim6">
+                               <div id="din6">
+                                  <h3> نظام ينتج عن الشواش </h3>
+                                   <p > نظام ينتج عن شواش قدم لنا عمل محفرز للنقاش ومنشط للفكر  </p>
+                                      <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%86%D8%B8%D8%A7%D9%85-%D9%8A%D9%86%D8%AA%D8%AC-%D8%B9%D9%86-%D8%A7%D9%84%D8%B4%D9%88%D8%A7%D8%B4-%D9%84%D9%80-%D8%A5%D9%84%D9%8A%D8%A7-%D8%A8%D8%B1%D9%8A%D8%BA%D9%88%D8%AC%D9%8A%D9%86-%D8%A5%D9%8A%D8%B2%D8%A7%D8%A8%D9%8A%D9%84%D8%A7-%D8%A7%D8%B3%D8%AA%D9%86%D8%AC%D8%B1.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%86%D8%B8%D8%A7%D9%85-%D9%8A%D9%86%D8%AA%D8%AC-%D8%B9%D9%86-%D8%A7%D9%84%D8%B4%D9%88%D8%A7%D8%B4-%D9%84%D9%80-%D8%A5%D9%84%D9%8A%D8%A7-%D8%A8%D8%B1%D9%8A%D8%BA%D9%88%D8%AC%D9%8A%D9%86-%D8%A5%D9%8A%D8%B2%D8%A7%D8%A8%D9%8A%D9%84%D8%A7-%D8%A7%D8%B3%D8%AA%D9%86%D8%AC%D8%B1.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                </div>
+                          </div>
+                      </div>
+                      
+                     <div class="col-sm-2 " >
+                            <div class="box" id="d7">
+                                <img src="Alkottob-RS5SH.jpg" id="dim7">
+                                <div id="din7">
+                                   <h3> أسطول داروين - كيف ربح أربعة رحَّالة إلى أسترالاسيا معركة التطور وغيَّروا وجه العالم </h3>
+                                   <p > يحكي لنا إيان ماكالمان، المؤرخ الثقافي الفائز بجوائز عديدة، قصصَ تشارلز داروين وأبرز مناصريه وزملائه: جوزيف هوكر</p>
+                                   <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A3%D8%B3%D8%B7%D9%88%D9%84-%D8%AF%D8%A7%D8%B1%D9%88%D9%8A%D9%86-%D9%83%D9%8A%D9%81-%D8%B1%D8%A8%D8%AD-%D8%A3%D8%B1%D8%A8%D8%B9%D8%A9-%D8%B1%D8%AD%D9%8E%D9%91%D8%A7%D9%84%D8%A9-%D8%A5%D9%84%D9%89-%D8%A3%D8%B3%D8%AA%D8%B1%D8%A7%D9%84%D8%A7%D8%B3%D9%8A%D8%A7-%D9%85%D8%B9%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D8%B1-%D9%88%D8%BA%D9%8A%D9%8E%D9%91%D8%B1%D9%88%D8%A7-%D9%88%D8%AC%D9%87-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%84%D9%80-%D8%A5%D9%8A%D8%A7%D9%86-%D9%85%D8%A7%D9%83%D8%A7%D9%84%D9%85%D8%A7%D9%86.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                   <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A3%D8%B3%D8%B7%D9%88%D9%84-%D8%AF%D8%A7%D8%B1%D9%88%D9%8A%D9%86-%D9%83%D9%8A%D9%81-%D8%B1%D8%A8%D8%AD-%D8%A3%D8%B1%D8%A8%D8%B9%D8%A9-%D8%B1%D8%AD%D9%8E%D9%91%D8%A7%D9%84%D8%A9-%D8%A5%D9%84%D9%89-%D8%A3%D8%B3%D8%AA%D8%B1%D8%A7%D9%84%D8%A7%D8%B3%D9%8A%D8%A7-%D9%85%D8%B9%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D8%B1-%D9%88%D8%BA%D9%8A%D9%8E%D9%91%D8%B1%D9%88%D8%A7-%D9%88%D8%AC%D9%87-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%84%D9%80-%D8%A5%D9%8A%D8%A7%D9%86-%D9%85%D8%A7%D9%83%D8%A7%D9%84%D9%85%D8%A7%D9%86.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                               </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-2 "  >
+                           <div class="box " id="d8">
+                                <img src="Alkottob-RSTHM.jpg" id="dim8">
+                                <div id="din8">
+                                   <h3> التعالق - أكبر لغز في الفيزياء </h3>
+                                    <p > هذا الكتاب يروى قصة التعالق، وهى ظاهرة تعنى أن كينونتين تظلان على ارتباط لا تنفصم عراهما بصرف النظر عن مقدار المسافة بينهما </p>
+                                     <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%84%D9%82-%D8%A3%D9%83%D8%A8%D8%B1-%D9%84%D8%BA%D8%B2-%D9%81%D9%8A-%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1-%D9%84%D9%80-%D8%A3%D9%85%D9%8A%D8%B1-%D8%A3%D9%83%D8%B2%D9%8A%D9%84.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%84%D9%82-%D8%A3%D9%83%D8%A8%D8%B1-%D9%84%D8%BA%D8%B2-%D9%81%D9%8A-%D8%A7%D9%84%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A1-%D9%84%D9%80-%D8%A3%D9%85%D9%8A%D8%B1-%D8%A3%D9%83%D8%B2%D9%8A%D9%84.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                   </div>
+                            </div>
+                      </div>
+                            <div class="col-sm-2 "  >
+                                <div class="box " id="d9">
+                                    <img src="Alkottob-RRY4X.jpg" id="dim9">
+                                    <div id="din9">
+                                      <h3> ميتافيزيقا الجسيميات - دراسة نقدية لواقعية ما دون الذرة </h3>
+                                       <p >الميتافيزيقا لغة هى ما بعد الطبيعة، وهى فى التقليد الفلسفى الموغل فى تاريخ الفكر الإنسانى البحث عن العلل الأولى </p>
+                                       <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%85%D9%8A%D8%AA%D8%A7%D9%81%D9%8A%D8%B2%D9%8A%D9%82%D8%A7-%D8%A7%D9%84%D8%AC%D8%B3%D9%8A%D9%85%D9%8A%D8%A7%D8%AA-%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D9%86%D9%82%D8%AF%D9%8A%D8%A9-%D9%84%D9%88%D8%A7%D9%82%D8%B9%D9%8A%D8%A9-%D9%85%D8%A7-%D8%AF%D9%88%D9%86-%D8%A7%D9%84%D8%B0%D8%B1%D8%A9-%D9%84%D9%80-%D8%A8%D8%B1%D9%8A%D8%AC%D9%8A%D8%AA%D9%87-%D9%81%D8%A7%D9%84%D9%83%D9%8A%D9%86%D8%A8%D9%88%D8%B1%D8%AC.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D9%85%D9%8A%D8%AA%D8%A7%D9%81%D9%8A%D8%B2%D9%8A%D9%82%D8%A7-%D8%A7%D9%84%D8%AC%D8%B3%D9%8A%D9%85%D9%8A%D8%A7%D8%AA-%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D9%86%D9%82%D8%AF%D9%8A%D8%A9-%D9%84%D9%88%D8%A7%D9%82%D8%B9%D9%8A%D8%A9-%D9%85%D8%A7-%D8%AF%D9%88%D9%86-%D8%A7%D9%84%D8%B0%D8%B1%D8%A9-%D9%84%D9%80-%D8%A8%D8%B1%D9%8A%D8%AC%D9%8A%D8%AA%D9%87-%D9%81%D8%A7%D9%84%D9%83%D9%8A%D9%86%D8%A8%D9%88%D8%B1%D8%AC.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                           </div>
+                          <div class="col-sm-2 "  >
+                             <div class="box " id="d10">
+                                 <img src="Alkottob-RSV48.jpg" id="dim10">
+                                 <div id="din10">
+                                    <h3> التدبير الإلهي - الأساس العلمي لعالم منطقي </h3>
+                                      <p >لماذا حدث هذا أو ذاك؟ لماذا لا أستطيع الخروج كي ألعب؟ فكانت إجابتهما : لأن السماء قد تمطر </p>
+                                        <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1-%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A-%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3-%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A-%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%85%D9%86%D8%B7%D9%82%D9%8A-%D9%84%D9%80-%D8%A8%D9%88%D9%84-%D8%AF%D9%8A%D9%81%D9%8A%D8%B2.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AA%D8%AF%D8%A8%D9%8A%D8%B1-%D8%A7%D9%84%D8%A5%D9%84%D9%87%D9%8A-%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3-%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A-%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%85%D9%86%D8%B7%D9%82%D9%8A-%D9%84%D9%80-%D8%A8%D9%88%D9%84-%D8%AF%D9%8A%D9%81%D9%8A%D8%B2.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-2 " >
+                              <div class="box " id="d11"> <img src="Alkottob-RSKC8.jpg" id="dim11">
+                                 <div id="din11">
+                                     <h3> الدقائق الثلاث الأخيرة </h3>
+                                       <p > هو قصة مستقبل الكون، كأفضل ما يمكن أن يتنبأ به العالم الفيزيائي بول ديفيز على أساس أحدث الأفكار عند بعض العلماء المعروفين في الفيزياء والكونيات </p>
+                                        <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AF%D9%82%D8%A7%D8%A6%D9%82-%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB-%D8%A7%D9%84%D8%A3%D8%AE%D9%8A%D8%B1%D8%A9-%D9%84%D9%80-%D8%A8%D9%88%D9%84-%D8%AF%D9%8A%D9%81%D9%8A%D8%B2.html/download" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.kutubpdfbook.com/book/%D8%AA%D8%AD%D9%85%D9%8A%D9%84-%D9%83%D8%AA%D8%A7%D8%A8-%D8%A7%D9%84%D8%AF%D9%82%D8%A7%D8%A6%D9%82-%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB-%D8%A7%D9%84%D8%A3%D8%AE%D9%8A%D8%B1%D8%A9-%D9%84%D9%80-%D8%A8%D9%88%D9%84-%D8%AF%D9%8A%D9%81%D9%8A%D8%B2.html/read" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                       </div>
+                   </div>
+                </div>
+           
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="lrcontrol">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="lrcontrol">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+         </div>
+        </div>
+
+          <!-- codes for articals -->
+          <br> <br> <br>
+          <div id="articles" class="container-fluid bg-grey" >
+              <h2>  Articles</h2>
+              <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" >
+                 <!-- Indicators -->
+                 <ol class="carousel-indicators">
+                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                     <li data-target="#myCarousel" data-slide-to="1"></li>
+                     <li data-target="#myCarousel" data-slide-to="2"></li>
+                   </ol>
+                 <!-- Wrapper for slides -->
+                 <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                         <div class="row">
+                             <div class="col-sm-2 " >
+                                 <div class="box" id="a">
+                                      <img src="https://www.free-ebooks.net/2d_covers/small/1191320118.jpg" id="aim">
+                                      <div id="ain">
+                                         <h3>Article Marketing Success</h3>
+                                         <a href="https://www.free-ebooks.net/marketing/Article-Marketing-Success" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/marketing/Article-Marketing-Success" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                    
+                                     </div>
+                                  </div>
+                              </div>
+                   
+                              <div class="col-sm-2 " >
+                                  <div class="box" id="a1">
+                                       <img src="https://www.free-ebooks.net/2d_covers/small/1678424252.jpg" id="aim1">
+                                       <div id="ain1">
+                                          <h3> Snickers! Bobby's First Adventure </h3>
+                                          <a href="https://www.free-ebooks.net/children/Snickers-Bobby-s-First-Adventure" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/children/Snickers-Bobby-s-First-Adventure" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                    
+                                     </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-2 "  >
+                                 <div class="box " id="a2">
+                                     <img src="https://www.free-ebooks.net/2d_covers/small/1678413691.jpg" id="aim2">
+                                     <div id="ain2">
+                                         <h3> Insights into Nature Spirits and Earth Energies </h3>
+                                         <a href="https://www.free-ebooks.net/body-spirit/Insights-into-Nature-Spirits-and-Earth-Energies" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/body-spirit/Insights-into-Nature-Spirits-and-Earth-Energies" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                
+                                      </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-2 "  >
+                                 <div class="box " id="a3">
+                                     <img src="https://www.free-ebooks.net/2d_covers/small/1165131033.jpg" id="aim3">
+                                      <div id="ain3">
+                                         <h3> Articles by Autoresponder </h3>
+                                         <a href="https://www.free-ebooks.net/web-design/Articles-by-Autoresponder" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/web-design/Articles-by-Autoresponder" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                      
+                                      </div>
+                                  </div>
+                             </div>
+                             <div class="col-sm-2 "  >
+                                 <div class="box " id="a4">
+                                     <img src="https://www.free-ebooks.net/2d_covers/small/1320590746.jpg" id="aim4">
+                                     <div id="ain4">
+                                         <h3> Article Traffic Mastery </h3>
+                                         <a href="https://www.free-ebooks.net/marketplace/Article-Traffic-Mastery" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href=" https://www.free-ebooks.net/marketplace/Article-Traffic-Mastery" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                  
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-2 " >
+                                 <div class="box " id="a5"> <img src="https://www.free-ebooks.net/2d_covers/small/1208136085.jpg" id="aim5">
+                                      <div id="ain5">
+                                        <h3> Article Magic </h3>
+                                         <a href="https://www.free-ebooks.net/marketing/Article-Magic" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/marketing/Article-Magic" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                              
+                                       </div>
+                                 </div>
+                              </div>
+                         </div>
+                     </div>
+                
+           
+                     <div class="item">
+                          <div class="row">
+                               <div class="col-sm-2 " >
+                                  <div class="box" id="a6">
+                                      <img src="https://www.free-ebooks.net/2d_covers/small/1307976863.jpg" id="aim6">
+                                      <div id="ain6">
+                                         <h3> Article Marketing Secrects That Produce A Successful Online Income </h3>
+                                         <a href="https://www.free-ebooks.net/marketplace/Article-Marketing-Secrects-That-Produce-A-Successful-Online-Income" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/marketplace/Article-Marketing-Secrects-That-Produce-A-Successful-Online-Income" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                      
+                                     </div>
+                                  </div>
+                              </div>
+                      
+                             <div class="col-sm-2 " >
+                                 <div class="box" id="a7">
+                                      <img src="https://www.free-ebooks.net/2d_covers/small/1175592161.jpg" id="aim7">
+                                      <div id="ain7">
+                                          <h3> BMA's Real Estate Management Articles, Vol. I </h3>
+                                          <a href="https://www.free-ebooks.net/business/BMA-s-Real-Estate-Management-Articles-Vol-I" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                          <a href="https://www.free-ebooks.net/business/BMA-s-Real-Estate-Management-Articles-Vol-I" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                          
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-2 "  >
+                                  <div class="box " id="a8">
+                                     <img src="https://www.free-ebooks.net/2d_covers/small/1240163454.jpg" id="aim8">
+                                     <div id="ain8">
+                                         <h3> Traffic Starter Presents Article Marketing </h3>
+                                         <a href="https://www.free-ebooks.net/computer-internet/Traffic-Starter-Presents-Article-Marketing" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/computer-internet/Traffic-Starter-Presents-Article-Marketing" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                            
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-sm-2 "  >
+                                   <div class="box " id="a9">
+                                       <img src="https://www.free-ebooks.net/2d_covers/small/1554972984.jpg" id="aim9">
+                                       <div id="ain9">
+                                          <h3> GDPR Articles With Commentary & EU Case Laws </h3>
+                                         <a href="https://www.free-ebooks.net/law-textbooks/GDPR-Articles-With-Commentary-EU-Case-Laws" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/law-textbooks/GDPR-Articles-With-Commentary-EU-Case-Laws" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>               
+                                      </div>
+                                   </div>
+                              </div>
+                             <div class="col-sm-2 "  >
+                                 <div class="box " id="a10">
+                                      <img src="https://www.free-ebooks.net/2d_covers/small/1196068614.jpg" id="aim10">
+                                     <div id="ain10">
+                                         <h3> Top Secrets to Little-Known Article Marketing Strategies </h3>
+                                         <a href="https://www.free-ebooks.net/marketing/Top-Secrets-to-Little-Known-Article-Marketing-Strategies" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/marketing/Top-Secrets-to-Little-Known-Article-Marketing-Strategies" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                       
+                                      </div>
+                                  </div>
+                               </div>
+                               <div class="col-sm-2 " >
+                                   <div class="box " id="a11"> <img src="https://www.free-ebooks.net/2d_covers/small/1175592083.jpg" id="aim11">
+                                      <div id="ain11">
+                                         <h3>  BMA's Performance Management Articles, Vol. I </h3>
+                                          <a href="https://www.free-ebooks.net/business/BMA-s-Performance-Management-Articles-Vol-I" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                          <a href="https://www.free-ebooks.net/business/BMA-s-Performance-Management-Articles-Vol-I" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a> 
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                 </div>
+           
+                 <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="lrcontrol">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="lrcontrol">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+         </div>
+
+         <!-- codes for reasrch -->
+         <br> <br> <br>
+         <div id="researchs" class="container-fluid bg-grey" >
+            <h2> Researchs </h2>
+            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" >
+                 <!-- Wrapper for slides -->
+                 <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                         <div class="row">
+                            <div class="col-sm-2 " >
+                                <div class="box" id="r">
+                                    <img src="https://www.free-ebooks.net/2d_covers/small/1385630336.jpg" id="rim">
+                                    <div id="rin">
+                                        <h3 >  Research in a Connected World </h3>
+                                        <a href="https://www.free-ebooks.net/internet-technology/Research-in-a-Connected-World" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/internet-technology/Research-in-a-Connected-World" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                      </div>
+                                </div>
+                            </div>
+                   
+                            <div class="col-sm-2 " >
+                                <div class="box" id="r1">
+                                    <img src="https://www.free-ebooks.net/2d_covers/small/1567655874.jpg" id="rim1">
+                                     <div id="rin1">
+                                        <h3 > Research of the U.S. Bureau of Labor Statistics (Review of Selected Research)</h3>
+                                         <a href="https://www.free-ebooks.net/academic-economics/Research-of-the-U-S-Bureau-of-Labor-Statistics-Review-of-Selected-Research" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/academic-economics/Research-of-the-U-S-Bureau-of-Labor-Statistics-Review-of-Selected-Research" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="r2">
+                                     <img src="https://www.free-ebooks.net/2d_covers/small/1388387515.jpg" id="rim2">
+                                     <div id="rin2">
+                                         <h3 >Stem Cell Research: A Science and Policy Overview</h3>
+                                         <a href="https://www.free-ebooks.net/academic-science/Stem-Cell-Research-A-Science-and-Policy-Overview" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/academic-science/Stem-Cell-Research-A-Science-and-Policy-Overview" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                        </div>
+                                </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="r3">
+                                     <img src="https://www.free-ebooks.net/2d_covers/small/1389150010.jpg" id="rim3">
+                                      <div id="rin3">
+                                         <h3 >  Charting the Course: Priorities for Breast Cancer Research, Report of the Breast Cancer Progress Rev </h3>
+                                            <a href="https://www.free-ebooks.net/medical-academic/Charting-the-Course-Priorities-for-Breast-Cancer-Research-Report-of-the-Breast-Cancer-Progress-Rev" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/medical-academic/Charting-the-Course-Priorities-for-Breast-Cancer-Research-Report-of-the-Breast-Cancer-Progress-Rev" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                      </div>
+                                </div>
+                             </div>
+                            <div class="col-sm-2 "  >
+                                 <div class="box " id="r4">
+                                    <img src="https://www.free-ebooks.net/2d_covers/small/1322827177.jpg" id="rim4">
+                                    <div id="rin4">
+                                        <h3 >  Social Media for Researchers and Online Personal Branding </h3>
+                                        <a href="https://www.free-ebooks.net/marketplace/Social-Media-for-Researchers-and-Online-Personal-Branding" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/marketplace/Social-Media-for-Researchers-and-Online-Personal-Branding" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                             </div>
+                            <div class="col-sm-2 " >
+                                 <div class="box " id="r5"> <img src="https://www.free-ebooks.net/2d_covers/small/1343001803.jpg" id="rim5">
+                                      <div id="rin5">
+                                         <h3 > Research Transactional Sex Amongst Young People in Rural Northern Tanzania: an Ethnography </h3>
+                                         <a href="" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                       </div>
+                                 </div>
+                                 </div>
+                         </div>
+                    </div>
+                
+           
+                   <div class="item">
+                       <div class="row">
+                        <div class="col-sm-2 " >
+                            <div class="box" id="r6">
+                               <img src="https://www.free-ebooks.net/2d_covers/small/1388989762.jpg" id="rim6">
+                               <div id="rin6">
+                               <h3>  e-Research Community Engagement Findings </h3>
+                                <a href="https://www.free-ebooks.net/internet-technology/e-Research-Community-Engagement-Findings" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                               <a href="https://www.free-ebooks.net/internet-technology/e-Research-Community-Engagement-Findings" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                </div>
+                          </div>
+                      </div>
+                      
+                     <div class="col-sm-2 " >
+                            <div class="box" id="r7">
+                                <img src="https://www.free-ebooks.net/2d_covers/small/1456894185.jpg" id="rim7">
+                                <div id="rin7">
+                                <h3>   Business Research Methodology </h3>
+                              <a href="https://www.free-ebooks.net/business-textbooks/Business-Research-Methodology" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                              <a href="https://www.free-ebooks.net/business-textbooks/Business-Research-Methodology" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                               </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-2 "  >
+                           <div class="box " id="r8">
+                                <img src="https://www.free-ebooks.net/2d_covers/small/1398067390.jpg" id="rim8">
+                                <div id="rin8">
+                                <h3>  President's Cancer Panel Meeting: Translating Research to Reduce the Burden of Cancer, Transcript of Proceedings, Columb </h3>
+                                  <a href="https://www.free-ebooks.net/archives/President-s-Cancer-Panel-Meeting-Translating-Research-to-Reduce-the-Burden-of-Cancer-Transcript-of-Proceedings-Columb" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                 <a href="https://www.free-ebooks.net/archives/President-s-Cancer-Panel-Meeting-Translating-Research-to-Reduce-the-Burden-of-Cancer-Transcript-of-Proceedings-Columb" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                   </div>
+                            </div>
+                      </div>
+                            <div class="col-sm-2 "  >
+                                <div class="box " id="r9">
+                                    <img src="https://www.free-ebooks.net/2d_covers/small/1398067145.jpg" id="rim9">
+                                    <div id="rin9">
+                                   <h3> President's Cancer Panel Meeting- The Future of Cancer Research: Accelerating Scientific Innovation, Transcript of Proce  </h3>
+                                           <a href="https://www.free-ebooks.net/archives/President-s-Cancer-Panel-Meeting-The-Future-of-Cancer-Research-Accelerating-Scientific-Innovation-Transcript-of-Proce" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/archives/President-s-Cancer-Panel-Meeting-The-Future-of-Cancer-Research-Accelerating-Scientific-Innovation-Transcript-of-Proce" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                           </div>
+                          <div class="col-sm-2 "  >
+                             <div class="box " id="r10">
+                                 <img src="https://www.free-ebooks.net/2d_covers/small/1444405954.jpg" id="rim10">
+                                 <div id="rin10">
+                                 <h3>  Surrealism - or Ones Lost in Time</h3>
+                                     <a href="https://www.free-ebooks.net/flash-fiction/Surrealism-or-Ones-Lost-in-Time" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                         <a href="https://www.free-ebooks.net/flash-fiction/Surrealism-or-Ones-Lost-in-Time" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                           </div>
+                           <div class="col-sm-2 " >
+                              <div class="box " id="r11"> <img src="https://www.free-ebooks.net/2d_covers/small/1436882471.jpg" id="rim11">
+                                 <div id="rin11">
+                                  <h3> Fiction Jackpot Secrets</h3>
+                                    <a href="https://www.free-ebooks.net/writing-publishing/Fiction-Jackpot-Secrets" target="_blank" class="download-book w-100 me-1 btn  btn-warning btn-icon">download <br></a>
+                                  <a href="https://www.free-ebooks.net/writing-publishing/Fiction-Jackpot-Secrets" target="_blank" class="download-book w-100 me-1 btn btn-warning btn-icon">read now</a>                                     </div>
+                              </div>
+                       </div>
+                   </div>
+                </div>
+           
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="lrcontrol">
+                   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="lrcontrol">
+                   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+         </div>
+
+      </div>
+           <br><br><br>
+       <!-- Container (Contact Section) -->
+      <div id="contact" class="container-fluid bg-grey"  >
+          <h2 > CONTACT </h2>
+          <div class="rows">
+             <div class="col-sm-5">
+                 <p>Contact us and we'll get back to you within 24 hours.</p>
+                 <p><span class="glyphicon glyphicon-map-marker"></span> Egypt , RedSea</p>
+                 <p><span class="glyphicon glyphicon-phone"></span>+0201010248801</p>
+                 <p><span class="glyphicon glyphicon-envelope"></span> fatmatemarek@gmail.com</p>
+              </div>
+           </div>
+           <div class="col-sm-7 slideanim">
+             <div class="rows">
+                  <div class="col-sm-6 form-group">
+                      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                  </div>
+            
+                  <div class="col-sm-6 form-group">
+                     <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                   </div>
+              </div>
+               <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+              <div class="rows">
+                  <div class="col-sm-12 form-group">
+                      <button class="btn btn-default pull-right" type="submit">Send</button>
+                  </div>
+              </div>
+           </div>
+       </div>
+
+       <!-- footer codes -->
+        <footer class="container-fluid text-center" id="fo"> <br><br>
+            <div id="dfo">
+             <div class="text-center">
+                 <h2> Follow US in </h2><br><br>
+               </div>
+              <a href="https://web.facebook.com/login/?_rdc=1&_rdr" id="sv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="sv1"  ><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+              <a href="https://web.whatsapp.com/" id="sv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="sv2"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+             <a href="https://www.instagram.com/" id="sv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="sv3"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a> 
+             <a href="https://twitter.com/i/flow/login" id="sv"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="sv4"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+          </div>
+           <a href="#myPage" title="To Top">
+              <span class="glyphicon glyphicon-chevron-up"></span>
+          </a> <br>
+         <ruby >
+             <dt>Devolper</dt>
+             <rt>fatmatemarek@gmail.com</rt>
+          </ruby>
+      </footer>
+
+   
+      </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 900, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+          
+          $(window).scroll(function() {
+            $(".slideanim").each(function(){
+              var pos = $(this).offset().top;
+        
+              var winTop = $(window).scrollTop();
+                if (pos < winTop + 600) {
+                  $(this).addClass("slide");
+                }
+            });
+          });
+        })
+
+        // jquery codes
+        $(document).ready(function(){
+            
+            $('#b').mouseenter(function(){
+                $('#im').slideUp(2000)
+                $('#in').slideDown(2000)
+            })
+            $('#b1').mouseleave(function(){
+                $('#in1').slideUp(2000)
+                $('#im1').slideDown(2000)
+            })
+            $('#b2').mouseenter(function(){
+                $('#im2').slideUp(2000)
+                $('#in2').slideDown(2000)
+            })
+            $('#b3').mouseleave(function(){
+                $('#in3').slideUp(2000)
+                $('#im3').slideDown(2000)
+            })
+            $('#b4').mouseenter(function(){
+                $('#im4').slideUp(2000)
+                $('#in4').slideDown(2000)
+            })
+            $('#b5').mouseleave(function(){
+                $('#in5').slideUp(2000)
+                $('#im5').slideDown(2000)
+            })
+            $('#b6').mouseenter(function(){
+                $('#im6').slideUp(2000)
+                $('#in6').slideDown(2000)
+            })
+            $('#b7').mouseleave(function(){
+                $('#in7').slideUp(2000)
+                $('#im7').slideDown(2000)
+            })
+            $('#b8').mouseenter(function(){
+                $('#im8').slideUp(2000)
+                $('#in8').slideDown(2000)
+            })
+            $('#b9').mouseleave(function(){
+                $('#in9').slideUp(2000)
+                $('#im9').slideDown(2000)
+            })
+            $('#b10').mouseenter(function(){
+                $('#im10').slideUp(2000)
+                $('#in10').slideDown(2000)
+            })
+            $('#b11').mouseleave(function(){
+                $('#in11').slideUp(2000)
+                $('#im11').slideDown(2000)
+            })
+            $('#s').mouseenter(function(){
+                $('#sim').slideUp(2000)
+                $('#sin').slideDown(2000)
+            })
+            $('#s1').mouseleave(function(){
+                $('#sin1').slideUp(2000)
+                $('#sim1').slideDown(2000)
+            })
+            $('#s2').mouseenter(function(){
+                $('#sim2').slideUp(2000)
+                $('#sin2').slideDown(2000)
+            })
+            $('#s3').mouseleave(function(){
+                $('#sin3').slideUp(2000)
+                $('#sim3').slideDown(2000)
+            })
+            $('#s4').mouseenter(function(){
+                $('#sim4').slideUp(2000)
+                $('#sin4').slideDown(2000)
+            })
+            $('#s5').mouseleave(function(){
+                $('#sin5').slideUp(2000)
+                $('#sim5').slideDown(2000)
+            })
+            $('#s6').mouseenter(function(){
+                $('#sim6').slideUp(2000)
+                $('#sin6').slideDown(2000)
+            })
+            $('#s7').mouseleave(function(){
+                $('#sin7').slideUp(2000)
+                $('#sim7').slideDown(2000)
+            })
+            $('#s8').mouseenter(function(){
+                $('#sim8').slideUp(2000)
+                $('#sin8').slideDown(2000)
+            })
+            $('#s9').mouseleave(function(){
+                $('#sin9').slideUp(2000)
+                $('#sim9').slideDown(2000)
+            })
+            $('#s10').mouseenter(function(){
+                $('#sim10').slideUp(2000)
+                $('#sin10').slideDown(2000)
+            })
+            $('#s11').mouseleave(function(){
+                $('#sin11').slideUp(2000)
+                $('#sim11').slideDown(2000)
+            })
+            $('#n').mouseenter(function(){
+                $('#nim').slideUp(2000)
+                $('#nin').slideDown(2000)
+            })
+            $('#n1').mouseleave(function(){
+                $('#nin1').slideUp(2000)
+                $('#nim1').slideDown(2000)
+            })
+            $('#n2').mouseenter(function(){
+                $('#nim2').slideUp(2000)
+                $('#nin2').slideDown(2000)
+            })
+            $('#n3').mouseleave(function(){
+                $('#nin3').slideUp(2000)
+                $('#nim3').slideDown(2000)
+            })
+            $('#n4').mouseenter(function(){
+                $('#nim4').slideUp(2000)
+                $('#nin4').slideDown(2000)
+            })
+            $('#n5').mouseleave(function(){
+                $('#nin5').slideUp(2000)
+                $('#nim5').slideDown(2000)
+            })
+            $('#n6').mouseenter(function(){
+                $('#nim6').slideUp(2000)
+                $('#nin6').slideDown(2000)
+            })
+            $('#n7').mouseleave(function(){
+                $('#nin7').slideUp(2000)
+                $('#nim7').slideDown(2000)
+            })
+            $('#n8').mouseenter(function(){
+                $('#nim8').slideUp(2000)
+                $('#nin8').slideDown(2000)
+            })
+            $('#n9').mouseleave(function(){
+                $('#nin9').slideUp(2000)
+                $('#nim9').slideDown(2000)
+            })
+            $('#n10').mouseenter(function(){
+                $('#nim10').slideUp(2000)
+                $('#nin10').slideDown(2000)
+            })
+            $('#n11').mouseleave(function(){
+                $('#nin11').slideUp(2000)
+                $('#nim11').slideDown(2000)
+            })
+            $('#m').mouseenter(function(){
+                $('#mim').slideUp(2000)
+                $('#min').slideDown(2000)
+            })
+            $('#m1').mouseleave(function(){
+                $('#min1').slideUp(2000)
+                $('#mim1').slideDown(2000)
+            })
+            $('#m2').mouseenter(function(){
+                $('#mim2').slideUp(2000)
+                $('#min2').slideDown(2000)
+            })
+            $('#m3').mouseleave(function(){
+                $('#min3').slideUp(2000)
+                $('#mim3').slideDown(2000)
+            })
+            $('#m4').mouseenter(function(){
+                $('#mim4').slideUp(2000)
+                $('#min4').slideDown(2000)
+            })
+            $('#m5').mouseleave(function(){
+                $('#min5').slideUp(2000)
+                $('#mim5').slideDown(2000)
+            })
+            $('#m6').mouseenter(function(){
+                $('#mim6').slideUp(2000)
+                $('#min6').slideDown(2000)
+            })
+            $('#m7').mouseleave(function(){
+                $('#min7').slideUp(2000)
+                $('#mim7').slideDown(2000)
+            })
+            $('#m8').mouseenter(function(){
+                $('#mim8').slideUp(2000)
+                $('#min8').slideDown(2000)
+            })
+            $('#m9').mouseleave(function(){
+                $('#min9').slideUp(2000)
+                $('#mim9').slideDown(2000)
+            })
+            $('#m10').mouseenter(function(){
+                $('#mim10').slideUp(2000)
+                $('#min10').slideDown(2000)
+            })
+            $('#m11').mouseleave(function(){
+                $('#min11').slideUp(2000)
+                $('#mim11').slideDown(2000)
+            })
+            $('#d').mouseenter(function(){
+                $('#dim').slideUp(2000)
+                $('#din').slideDown(2000)
+            })
+            $('#d1').mouseleave(function(){
+                $('#din1').slideUp(2000)
+                $('#dim1').slideDown(2000)
+            })
+            $('#d2').mouseenter(function(){
+                $('#dim2').slideUp(2000)
+                $('#din2').slideDown(2000)
+            })
+            $('#d3').mouseleave(function(){
+                $('#din3').slideUp(2000)
+                $('#dim3').slideDown(2000)
+            })
+            $('#d4').mouseenter(function(){
+                $('#dim4').slideUp(2000)
+                $('#din4').slideDown(2000)
+            })
+            $('#d5').mouseleave(function(){
+                $('#din5').slideUp(2000)
+                $('#dim5').slideDown(2000)
+            })
+            $('#d6').mouseenter(function(){
+                $('#dim6').slideUp(2000)
+                $('#din6').slideDown(2000)
+            })
+            $('#d7').mouseleave(function(){
+                $('#din7').slideUp(2000)
+                $('#dim7').slideDown(2000)
+            })
+            $('#d8').mouseenter(function(){
+                $('#dim8').slideUp(2000)
+                $('#din8').slideDown(2000)
+            })
+            $('#d9').mouseleave(function(){
+                $('#din9').slideUp(2000)
+                $('#dim9').slideDown(2000)
+            })
+            $('#d10').mouseenter(function(){
+                $('#dim10').slideUp(2000)
+                $('#din10').slideDown(2000)
+            })
+            $('#d11').mouseleave(function(){
+                $('#din11').slideUp(2000)
+                $('#dim11').slideDown(2000)
+            })
+            $('#a').mouseenter(function(){
+                $('#aim').slideUp(2000)
+                $('#ain').slideDown(2000)
+            })
+            $('#a1').mouseleave(function(){
+                $('#ain1').slideUp(2000)
+                $('#aim1').slideDown(2000)
+            })
+            $('#a2').mouseenter(function(){
+                $('#aim2').slideUp(2000)
+                $('#ain2').slideDown(2000)
+            })
+            $('#a3').mouseleave(function(){
+                $('#ain3').slideUp(2000)
+                $('#aim3').slideDown(2000)
+            })
+            $('#a4').mouseenter(function(){
+                $('#aim4').slideUp(2000)
+                $('#ain4').slideDown(2000)
+            })
+            $('#a5').mouseleave(function(){
+                $('#ain5').slideUp(2000)
+                $('#aim5').slideDown(2000)
+            })
+            $('#a6').mouseenter(function(){
+                $('#aim6').slideUp(2000)
+                $('#ain6').slideDown(2000)
+            })
+            $('#a7').mouseleave(function(){
+                $('#ain7').slideUp(2000)
+                $('#aim7').slideDown(2000)
+            })
+            $('#a8').mouseenter(function(){
+                $('#aim8').slideUp(2000)
+                $('#ain8').slideDown(2000)
+            })
+            $('#a9').mouseleave(function(){
+                $('#ain9').slideUp(2000)
+                $('#aim9').slideDown(2000)
+            })
+            $('#a10').mouseenter(function(){
+                $('#aim10').slideUp(2000)
+                $('#ain10').slideDown(2000)
+            })
+            $('#a11').mouseleave(function(){
+                $('#ain11').slideUp(2000)
+                $('#aim11').slideDown(2000)
+            })
+            $('#r').mouseenter(function(){
+                $('#rim').slideUp(2000)
+                $('#rin').slideDown(2000)
+            })
+            $('#r1').mouseleave(function(){
+                $('#rin1').slideUp(2000)
+                $('#rim1').slideDown(2000)
+            })
+            $('#r2').mouseenter(function(){
+                $('#rim2').slideUp(2000)
+                $('#rin2').slideDown(2000)
+            })
+            $('#r3').mouseleave(function(){
+                $('#rin3').slideUp(2000)
+                $('#rim3').slideDown(2000)
+            })
+            $('#r4').mouseenter(function(){
+                $('#rim4').slideUp(2000)
+                $('#rin4').slideDown(2000)
+            })
+            $('#r5').mouseleave(function(){
+                $('#rin5').slideUp(2000)
+                $('#rim5').slideDown(2000)
+            })
+            $('#r6').mouseenter(function(){
+                $('#rim6').slideUp(2000)
+                $('#rin6').slideDown(2000)
+            })
+            $('#r7').mouseleave(function(){
+                $('#rin7').slideUp(2000)
+                $('#rim7').slideDown(2000)
+            })
+            $('#r8').mouseenter(function(){
+                $('#rim8').slideUp(2000)
+                $('#rin8').slideDown(2000)
+            })
+            $('#r9').mouseleave(function(){
+                $('#rin9').slideUp(2000)
+                $('#rim9').slideDown(2000)
+            })
+            $('#r10').mouseenter(function(){
+                $('#rim10').slideUp(2000)
+                $('#rin10').slideDown(2000)
+            })
+            $('#r11').mouseleave(function(){
+                $('#rin11').slideUp(2000)
+                $('#rim11').slideDown(2000)
+            })
+
+           
+
+        });
+        $(document).ready(function(){
+            $('#b').mouseleave(function(){
+                $('#in').slideUp(2000)
+                $('#im').slideDown(2000)
+            })
+            $('#b1').mouseenter(function(){
+                $('#im1').slideUp(2000)
+                $('#in1').slideDown(2000)
+            })
+            $('#b2').mouseleave(function(){
+                $('#in2').slideUp(2000)
+                $('#im2').slideDown(2000)
+            })
+            $('#b3').mouseenter(function(){
+                $('#im3').slideUp(2000)
+                $('#in3').slideDown(2000)
+            })
+            $('#b4').mouseleave(function(){
+                $('#in4').slideUp(2000)
+                $('#im4').slideDown(2000)
+            })
+            $('#b5').mouseenter(function(){
+                $('#im5').slideUp(2000)
+                $('#in5').slideDown(2000)
+            })
+            $('#b6').mouseleave(function(){
+                $('#in6').slideUp(2000)
+                $('#im6').slideDown(2000)
+            })
+            $('#b7').mouseenter(function(){
+                $('#im7').slideUp(2000)
+                $('#in7').slideDown(2000)
+            })
+            $('#b8').mouseleave(function(){
+                $('#in8').slideUp(2000)
+                $('#im8').slideDown(2000)
+            })
+            $('#b9').mouseenter(function(){
+                $('#im9').slideUp(2000)
+                $('#in9').slideDown(2000)
+            })
+            $('#b10').mouseleave(function(){
+                $('#in10').slideUp(2000)
+                $('#im10').slideDown(2000)
+            })
+            $('#b11').mouseenter(function(){
+                $('#im11').slideUp(2000)
+                $('#in11').slideDown(2000)
+            })
+            $('#s').mouseleave(function(){
+                $('#sin').slideUp(2000)
+                $('#sim').slideDown(2000)
+            })
+            $('#s1').mouseenter(function(){
+                $('#sim1').slideUp(2000)
+                $('#sin1').slideDown(2000)
+            })
+            $('#s2').mouseleave(function(){
+                $('#sin2').slideUp(2000)
+                $('#sim2').slideDown(2000)
+            })
+            $('#s3').mouseenter(function(){
+                $('#sim3').slideUp(2000)
+                $('#sin3').slideDown(2000)
+            })
+            $('#s4').mouseleave(function(){
+                $('#sin4').slideUp(2000)
+                $('#sim4').slideDown(2000)
+            })
+            $('#s5').mouseenter(function(){
+                $('#sim5').slideUp(2000)
+                $('#sin5').slideDown(2000)
+            })
+            $('#s6').mouseleave(function(){
+                $('#sin6').slideUp(2000)
+                $('#sim6').slideDown(2000)
+            })
+            $('#s7').mouseenter(function(){
+                $('#sim7').slideUp(2000)
+                $('#sin7').slideDown(2000)
+            })
+            $('#s8').mouseleave(function(){
+                $('#sin8').slideUp(2000)
+                $('#sim8').slideDown(2000)
+            })
+            $('#s9').mouseenter(function(){
+                $('#sim9').slideUp(2000)
+                $('#sin9').slideDown(2000)
+            })
+            $('#s10').mouseleave(function(){
+                $('#sin10').slideUp(2000)
+                $('#sim10').slideDown(2000)
+            })
+            $('#s11').mouseenter(function(){
+                $('#sim11').slideUp(2000)
+                $('#sin11').slideDown(2000)
+            })
+            $('#n').mouseleave(function(){
+                $('#nin').slideUp(2000)
+                $('#nim').slideDown(2000)
+            })
+            $('#n1').mouseenter(function(){
+                $('#nim1').slideUp(2000)
+                $('#nin1').slideDown(2000)
+            })
+            $('#n2').mouseleave(function(){
+                $('#nin2').slideUp(2000)
+                $('#nim2').slideDown(2000)
+            })
+            $('#n3').mouseenter(function(){
+                $('#nim3').slideUp(2000)
+                $('#nin3').slideDown(2000)
+            })
+            $('#n4').mouseleave(function(){
+                $('#nin4').slideUp(2000)
+                $('#nim4').slideDown(2000)
+            })
+            $('#n5').mouseenter(function(){
+                $('#nim5').slideUp(2000)
+                $('#nin5').slideDown(2000)
+            })
+            $('#n6').mouseleave(function(){
+                $('#nin6').slideUp(2000)
+                $('#nim6').slideDown(2000)
+            })
+            $('#n7').mouseenter(function(){
+                $('#nim7').slideUp(2000)
+                $('#nin7').slideDown(2000)
+            })
+            $('#n8').mouseleave(function(){
+                $('#nin8').slideUp(2000)
+                $('#nim8').slideDown(2000)
+            })
+            $('#n9').mouseenter(function(){
+                $('#nim9').slideUp(2000)
+                $('#nin9').slideDown(2000)
+            })
+            $('#n10').mouseleave(function(){
+                $('#nin10').slideUp(2000)
+                $('#nim10').slideDown(2000)
+            })
+            $('#n11').mouseenter(function(){
+                $('#nim11').slideUp(2000)
+                $('#nin11').slideDown(2000)
+            })
+            $('#m').mouseleave(function(){
+                $('#min').slideUp(2000)
+                $('#mim').slideDown(2000)
+            })
+            $('#m1').mouseenter(function(){
+                $('#mim1').slideUp(2000)
+                $('#min1').slideDown(2000)
+            })
+            $('#m2').mouseleave(function(){
+                $('#min2').slideUp(2000)
+                $('#mim2').slideDown(2000)
+            })
+            $('#m3').mouseenter(function(){
+                $('#mim3').slideUp(2000)
+                $('#min3').slideDown(2000)
+            })
+            $('#m4').mouseleave(function(){
+                $('#min4').slideUp(2000)
+                $('#mim4').slideDown(2000)
+            })
+            $('#m5').mouseenter(function(){
+                $('#mim5').slideUp(2000)
+                $('#min5').slideDown(2000)
+            })
+            $('#m6').mouseleave(function(){
+                $('#min6').slideUp(2000)
+                $('#mim6').slideDown(2000)
+            })
+            $('#m7').mouseenter(function(){
+                $('#mim7').slideUp(2000)
+                $('#min7').slideDown(2000)
+            })
+            $('#m8').mouseleave(function(){
+                $('#min8').slideUp(2000)
+                $('#mim8').slideDown(2000)
+            })
+            $('#m9').mouseenter(function(){
+                $('#mim9').slideUp(2000)
+                $('#min9').slideDown(2000)
+            })
+            $('#m10').mouseleave(function(){
+                $('#min10').slideUp(2000)
+                $('#mim10').slideDown(2000)
+            })
+            $('#m11').mouseenter(function(){
+                $('#mim11').slideUp(2000)
+                $('#min11').slideDown(2000)
+            })
+            $('#d').mouseleave(function(){
+                $('#din').slideUp(2000)
+                $('#dim').slideDown(2000)
+            })
+            $('#d1').mouseenter(function(){
+                $('#dim1').slideUp(2000)
+                $('#din1').slideDown(2000)
+            })
+            $('#d2').mouseleave(function(){
+                $('#din2').slideUp(2000)
+                $('#dim2').slideDown(2000)
+            })
+            $('#d3').mouseenter(function(){
+                $('#dim3').slideUp(2000)
+                $('#din3').slideDown(2000)
+            })
+            $('#d4').mouseleave(function(){
+                $('#din4').slideUp(2000)
+                $('#dim4').slideDown(2000)
+            })
+            $('#d5').mouseenter(function(){
+                $('#dim5').slideUp(2000)
+                $('#din5').slideDown(2000)
+            })
+            $('#d6').mouseleave(function(){
+                $('#din6').slideUp(2000)
+                $('#dim6').slideDown(2000)
+            })
+            $('#d7').mouseenter(function(){
+                $('#dim7').slideUp(2000)
+                $('#din7').slideDown(2000)
+            })
+            $('#d8').mouseleave(function(){
+                $('#din8').slideUp(2000)
+                $('#dim8').slideDown(2000)
+            })
+            $('#d9').mouseenter(function(){
+                $('#dim9').slideUp(2000)
+                $('#din9').slideDown(2000)
+            })
+            $('#d10').mouseleave(function(){
+                $('#din10').slideUp(2000)
+                $('#dim10').slideDown(2000)
+            })
+            $('#d11').mouseenter(function(){
+                $('#dim11').slideUp(2000)
+                $('#din11').slideDown(2000)
+            })
+            $('#a').mouseleave(function(){
+                $('#ain').slideUp(2000)
+                $('#aim').slideDown(2000)
+            })
+            $('#a1').mouseenter(function(){
+                $('#aim1').slideUp(2000)
+                $('#ain1').slideDown(2000)
+            })
+            $('#a2').mouseleave(function(){
+                $('#ain2').slideUp(2000)
+                $('#aim2').slideDown(2000)
+            })
+            $('#a3').mouseenter(function(){
+                $('#aim3').slideUp(2000)
+                $('#ain3').slideDown(2000)
+            })
+            $('#a4').mouseleave(function(){
+                $('#ain4').slideUp(2000)
+                $('#aim4').slideDown(2000)
+            })
+            $('#a5').mouseenter(function(){
+                $('#aim5').slideUp(2000)
+                $('#ain5').slideDown(2000)
+            })
+            $('#a6').mouseleave(function(){
+                $('#ain6').slideUp(2000)
+                $('#aim6').slideDown(2000)
+            })
+            $('#a7').mouseenter(function(){
+                $('#aim7').slideUp(2000)
+                $('#ain7').slideDown(2000)
+            })
+            $('#a8').mouseleave(function(){
+                $('#ain8').slideUp(2000)
+                $('#aim8').slideDown(2000)
+            })
+            $('#a9').mouseenter(function(){
+                $('#aim9').slideUp(2000)
+                $('#ain9').slideDown(2000)
+            })
+            $('#a10').mouseleave(function(){
+                $('#ain10').slideUp(2000)
+                $('#aim10').slideDown(2000)
+            })
+            $('#a11').mouseenter(function(){
+                $('#aim11').slideUp(2000)
+                $('#ain11').slideDown(2000)
+            })
+            $('#r').mouseleave(function(){
+                $('#rin').slideUp(2000)
+                $('#rim').slideDown(2000)
+            })
+            $('#r1').mouseenter(function(){
+                $('#rim1').slideUp(2000)
+                $('#rin1').slideDown(2000)
+            })
+            $('#r2').mouseleave(function(){
+                $('#rin2').slideUp(2000)
+                $('#rim2').slideDown(2000)
+            })
+            $('#r3').mouseenter(function(){
+                $('#rim3').slideUp(2000)
+                $('#rin3').slideDown(2000)
+            })
+            $('#r4').mouseleave(function(){
+                $('#rin4').slideUp(2000)
+                $('#rim4').slideDown(2000)
+            })
+            $('#r5').mouseenter(function(){
+                $('#rim5').slideUp(2000)
+                $('#rin5').slideDown(2000)
+            })
+            $('#r6').mouseleave(function(){
+                $('#rin6').slideUp(2000)
+                $('#rim6').slideDown(2000)
+            })
+            $('#r7').mouseenter(function(){
+                $('#rim7').slideUp(2000)
+                $('#rin7').slideDown(2000)
+            })
+            $('#r8').mouseleave(function(){
+                $('#rin8').slideUp(2000)
+                $('#rim8').slideDown(2000)
+            })
+            $('#r9').mouseenter(function(){
+                $('#rim9').slideUp(2000)
+                $('#rin9').slideDown(2000)
+            })
+            $('#r10').mouseleave(function(){
+                $('#rin10').slideUp(2000)
+                $('#rim10').slideDown(2000)
+            })
+            $('#r11').mouseenter(function(){
+                $('#rim11').slideUp(2000)
+                $('#rin11').slideDown(2000)
+            })
+
+        });
+        $(document).ready(function(){
+            $('#lib').mouseenter (function(){
+                $("#libo").show(2000)
+            })
+            $('#lib').mouseleave (function(){
+                $("#libo").hide(2000)
+            })
+        })
+
+
+    </script>
+        
+</body>
+</html>
